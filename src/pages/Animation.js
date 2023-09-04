@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Trail, OrbitControls, Stars } from '@react-three/drei'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
+import { useLoader } from '@react-three/fiber'
 
 function ShootingStar() {
   const ref = useRef()
@@ -21,6 +22,19 @@ function ShootingStar() {
   )
 }
 
+function Logo() {
+
+    const texture = useLoader(THREE.TextureLoader, "pantheon_main_black.png");
+    
+    return (
+        <mesh >
+        <planeGeometry attach="geometry" args={[10, 7.5]} />
+        <meshLambertMaterial attach="material" map={texture} />
+        </mesh>
+    );
+    
+}
+
 export default function Animation() {
   return (
     <div className='h-[400px]' >
@@ -28,6 +42,7 @@ export default function Animation() {
             <color attach="background" args={['black']} />
             <ambientLight intensity={1} />
             <ShootingStar />
+            <Logo />
             <Stars saturation={false} count={400} speed={0.5} />
             <OrbitControls />
             <EffectComposer>

@@ -12,6 +12,7 @@ export default function Home() {
       {/* <Landing /> */}
       {/* <ShootingStars /> */}
       <Animation />
+      {/* <Image alt='13e' src={pantheon_main_black} /> */}
 
     </div>
   )
