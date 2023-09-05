@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Trail, OrbitControls, Stars } from '@react-three/drei'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
+import Image from 'next/image';
 
 function ShootingStar() {
   const ref = useRef()
@@ -23,18 +24,18 @@ function ShootingStar() {
 
 export default function Animation() {
   return (
-    <div className='h-[400px]' >
-        <Canvas  camera={{ position: [0, 0, 15] }}>
+    <div className='h-screen' >
+        <Canvas className='fixed' camera={{ position: [0, 0, 15] }}>
             <color attach="background" args={['black']} />
             <ambientLight intensity={1} />
             <ShootingStar />
-            <Stars saturation={false} count={400} speed={0.5} />
+            <Stars saturation={false} count={800} speed={0.3} />
             <OrbitControls />
             <EffectComposer>
                 <Bloom mipmapBlur luminanceThreshold={1} />
             </EffectComposer>
         </Canvas>
-        
+        <Image src="/pantheon_main_white.png" alt="pantheon" width={500} height={500} className='fixed left-0 top-0 z-100 bg-transparent text-white' />
     </div>
   )
 }
