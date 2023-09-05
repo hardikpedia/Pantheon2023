@@ -42,11 +42,9 @@ const Landing = () => {
     })
 
   return (
-    <div className='flex flex-col items-center justify-center' >
-        <h1 >PANTHEON 2023</h1>
-        <h1 >Coming Soon</h1>
-
-        <h1 >{days} Days {hours} Hours {minutes} Minutes {seconds} Seconds</h1>
+    <div className='w-[500px] flex flex-col justify-center items-center fixed left-[35%] bottom-[30%] z-100 bg-transparent text-white' >
+        <h1 className="text-6xl " >Coming Soon...</h1>
+        <h1 className="text-2xl mt-6">{days} Days {hours} Hours {minutes} Minutes {seconds} Seconds</h1>
 
     </div>
   )
