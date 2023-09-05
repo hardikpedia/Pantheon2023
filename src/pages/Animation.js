@@ -49,7 +49,7 @@ export default function Animation() {
             </EffectComposer>
         </Canvas>
         <div>
-          <Image src="/pantheon_main_white.png" alt="pantheon" width={500} height={500} className='fixed left-[35%] top-0 z-100 bg-transparent text-white' />
+          <Image src="/pantheon_main_white.png" alt="pantheon" width={500} height={500} className='fixed left-[35%] top-10 z-100 bg-transparent text-white' />
         </div>
     </div>
   )

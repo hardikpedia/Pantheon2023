@@ -10,7 +10,7 @@ const Landing = () => {
     let interval = useRef()
 
     const startTimer = () => {
-        var countDownDate = new Date("Oct 06, 2023, 00:00:00").getTime();
+        var countDownDate = new Date("Oct 07, 2023, 00:00:00").getTime();
 
         interval = setInterval(function(){
             var now = new Date().getTime();
@@ -42,9 +42,42 @@ const Landing = () => {
     })
 
   return (
-    <div className='w-[500px] flex flex-col justify-center items-center fixed left-[35%] bottom-[30%] z-100 bg-transparent text-white' >
-        <h1 className="text-6xl " >Coming Soon...</h1>
-        <h1 className="text-2xl mt-6">{days} Days {hours} Hours {minutes} Minutes {seconds} Seconds</h1>
+    <div className='w-[500px] flex flex-row justify-center items-center fixed left-[35%] bottom-[30%] z-100 bg-transparent text-white' >
+        {/* <h1 className="text-6xl " >Coming Soon...</h1> */}
+        
+        <div className="flex flex-col justify-center items-center mt-10" >
+            <div className="flex flex-col justify-center items-center mr-5" >
+                <h1 className="text-6xl" >{days} : </h1>
+            </div>
+            <div className="flex flex-col justify-center items-center mr-5" >
+                <h1 className="-ml-6" >DAYS</h1>
+            </div>
+        </div>
+        <div className="flex flex-col justify-center items-center mt-10" >
+            <div className="flex flex-col justify-center items-center mr-5" >
+                <h1 className="text-6xl" >{hours} :</h1>
+            </div>
+            <div className="flex flex-col justify-center items-center mr-5" >
+                <h1 className="-ml-6" >HOURS</h1>
+            </div>
+        </div>
+        <div className="flex flex-col justify-center items-center mt-10" >
+            <div className="flex flex-col justify-center items-center mr-5" >
+                <h1 className="text-6xl" >{minutes} :</h1>
+            </div>
+            <div className="flex flex-col justify-center items-center mr-5" >
+                <h1 className="-ml-6" >MINS</h1>
+            </div>
+            
+         </div>
+        <div className="flex flex-col justify-center items-center mt-10" >
+            <div className="flex flex-col justify-center items-center mr-5" >
+                <h1 className="text-6xl" >{seconds}</h1>
+            </div>
+            <div className="flex flex-col justify-center items-center mr-5" >
+                <h1 className="" >SEC</h1>
+            </div>
+        </div>
 
     </div>
   )
