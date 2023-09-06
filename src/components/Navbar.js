@@ -7,9 +7,9 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-//bg-[#01040f]
+
   return (
-    <nav className="fixed z-105 top-0 left-0 bg-none">
+    <nav className="bg-[#01040f] ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="flex items-center justify-between h-16">
