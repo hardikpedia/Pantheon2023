@@ -42,7 +42,7 @@ const Landing = () => {
     })
 
   return (
-    <div className='w-[500px] flex flex-row justify-center items-center fixed left-[35%] bottom-[30%] z-100 bg-transparent text-white' >
+    <div className='w-[500px] flex flex-row justify-center items-center fixed left-[50%] translate-x-[-50%] bottom-[15%] z-100 bg-transparent text-white' >
         {/* <h1 className="text-6xl " >Coming Soon...</h1> */}
         
         <div className="flex flex-col justify-center items-center mt-10" >
