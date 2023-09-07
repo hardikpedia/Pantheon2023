@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import TimerComponent from "@/components/TimerComponent"
 
 const Landing = () => {
 
@@ -45,39 +46,23 @@ const Landing = () => {
     <div className='w-[500px] flex flex-row justify-center items-center fixed left-[50%] translate-x-[-50%] bottom-[15%] z-100 bg-transparent text-white' >
         {/* <h1 className="text-6xl " >Coming Soon...</h1> */}
         
-        <div className="flex flex-col justify-center items-center mt-10" >
-            <div className="flex flex-col justify-center items-center mr-5" >
-                <h1 className="text-6xl" >{days} : </h1>
-            </div>
-            <div className="flex flex-col justify-center items-center mr-5" >
-                <h1 className="-ml-6" >DAYS</h1>
-            </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mt-10" >
-            <div className="flex flex-col justify-center items-center mr-5" >
-                <h1 className="text-6xl" >{hours} :</h1>
-            </div>
-            <div className="flex flex-col justify-center items-center mr-5" >
-                <h1 className="-ml-6" >HOURS</h1>
-            </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mt-10" >
-            <div className="flex flex-col justify-center items-center mr-5" >
-                <h1 className="text-6xl" >{minutes} :</h1>
-            </div>
-            <div className="flex flex-col justify-center items-center mr-5" >
-                <h1 className="-ml-6" >MINS</h1>
-            </div>
-            
-         </div>
-        <div className="flex flex-col justify-center items-center mt-10" >
-            <div className="flex flex-col justify-center items-center mr-5" >
-                <h1 className="text-6xl" >{seconds}</h1>
-            </div>
-            <div className="flex flex-col justify-center items-center mr-5" >
-                <h1 className="" >SEC</h1>
-            </div>
-        </div>
+        <TimerComponent 
+            label="DAYS"
+            value={days}
+        />
+        <TimerComponent 
+            label="HOURS"
+            value={hours}
+        />
+        <TimerComponent 
+            label="MINS"
+            value={minutes}
+        />
+        <TimerComponent 
+            label="SEC"
+            value={seconds}
+        />
+        
 
     </div>
   )

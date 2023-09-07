@@ -22,18 +22,7 @@ function ShootingStar() {
   )
 }
 
-function Logo() {
 
-    const texture = useLoader(THREE.TextureLoader, "pantheon_main_black.png");
-    
-    return (
-        <mesh >
-        <planeGeometry attach="geometry" args={[10, 7.5]} />
-        <meshLambertMaterial attach="material" map={texture} />
-        </mesh>
-    );
-    
-}
 
 export default function Animation() {
   return (
@@ -43,7 +32,11 @@ export default function Animation() {
             <ambientLight intensity={1} />
             <ShootingStar />
             <Stars saturation={false} count={800} speed={0.3} />
-            <OrbitControls />
+
+            <OrbitControls
+              minDistance={5}  
+              maxDistance={50} 
+            />
             <EffectComposer>
                 <Bloom mipmapBlur luminanceThreshold={1} />
             </EffectComposer>
