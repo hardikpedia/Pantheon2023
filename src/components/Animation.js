@@ -10,7 +10,7 @@ function ShootingStar() {
   useFrame((state) => {
     const t = state.clock.getElapsedTime() * 2
     // ref.current.position.set(Math.sin(t) * 8, Math.atan(t) * Math.cos(t / 2), 2 * Math.sin((2 / Math.PI) * t))
-    ref.current.position.set(Math.cos(t) * 4, Math.sin(2 * t) * 2 + 3.5, 2 * Math.sin((2 / Math.PI) * t))
+    ref.current.position.set(Math.cos(t) * 4, Math.sin(2 * t) * 2 + 2, 2 * Math.sin((2 / Math.PI) * t))
   })
 
   return (
