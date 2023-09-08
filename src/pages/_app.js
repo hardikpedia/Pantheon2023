@@ -1,6 +1,7 @@
+import Navbar from '@/components/Navbar';
 import '@/styles/globals.css'
 import Head from 'next/head'
- 
+
 export function Home() {
   return (
     <div>
@@ -14,10 +15,11 @@ export function Home() {
 export default function App({ Component, pageProps }) {
   return (
     <>
+      {/* <Navbar /> */}
       <Home />
       <Component {...pageProps} />
     </>
   );
-  
-  
+
+
 }
