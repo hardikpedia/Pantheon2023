@@ -27,7 +27,7 @@ function ShootingStar() {
 
 export default function Animation() {
   return (
-    <div className='h-screen' >
+    <div className='h-screen ' >
       <Canvas className='fixed' camera={{ position: [0, 0, 15] }}>
         <color attach="background" args={['black']} />
         <ambientLight intensity={1} />
