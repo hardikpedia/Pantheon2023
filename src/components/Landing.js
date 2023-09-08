@@ -13,25 +13,25 @@ const Landing = () => {
     const startTimer = () => {
         var countDownDate = new Date("Oct 07, 2023, 00:00:00").getTime();
 
-        interval = setInterval(function(){
+        interval = setInterval(function () {
             var now = new Date().getTime();
             var distance = countDownDate - now;
-            var days = Math.floor(distance/(1000*60*60*24));
-            var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-            var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-            var seconds = Math.floor((distance%(1000*60))/1000);
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            if(distance < 0){
+            if (distance < 0) {
                 //stop timer
                 clearInterval(interval.current)
-            }else{
+            } else {
                 //update timer
                 setDays(days)
                 setHours(hours)
                 setMinutes(minutes)
                 setSeconds(seconds)
             }
-        
+
         }, 1000)
     }
 
@@ -42,30 +42,30 @@ const Landing = () => {
         }
     })
 
-  return (
-    <div className='w-[500px] flex flex-row justify-center items-center fixed left-[50%] translate-x-[-50%] bottom-[15%] z-100 bg-transparent text-white' >
-        {/* <h1 className="text-6xl " >Coming Soon...</h1> */}
-        
-        <TimerComponent 
-            label="DAYS"
-            value={days}
-        />
-        <TimerComponent 
-            label="HOURS"
-            value={hours}
-        />
-        <TimerComponent 
-            label="MINS"
-            value={minutes}
-        />
-        <TimerComponent 
-            label="SEC"
-            value={seconds}
-        />
-        
+    return (
+        <div className=' bg-white/[0.15] h-fit w-fit rounded-xl flex flex-row justify-center items-center md:px-4 text-white' >
+            {/* <h1 className="text-6xl " >Coming Soon...</h1> */}
 
-    </div>
-  )
+            <TimerComponent
+                label="DAYS"
+                value={days}
+            />
+            <TimerComponent
+                label="HOURS"
+                value={hours}
+            />
+            <TimerComponent
+                label="MINUTES"
+                value={minutes}
+            />
+            <TimerComponent
+                label="SECONDS"
+                value={seconds}
+            />
+
+
+        </div>
+    )
 }
 
 export default Landing
