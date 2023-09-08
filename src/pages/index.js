@@ -14,7 +14,7 @@ export default function Home() {
         <Animation />
 
       </div>
-      <div className='fixed scale-125 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-100 bg-transparent'>
+      <div className='fixed scale-110 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-100 bg-transparent'>
         <div>
           <Image src="/pantheon_main_white.png" alt="pantheon" width={500} height={500} className=' text-white' />
         </div>
