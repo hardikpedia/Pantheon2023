@@ -43,7 +43,7 @@ const Landing = () => {
     })
 
     return (
-        <div className=' bg-white/[0.15] h-fit w-fit rounded-xl flex flex-row justify-center items-center md:px-4 text-white' >
+        <div className=' bg-white/[0.15] h-fit w-fit rounded-md md:rounded-lg flex flex-row justify-center items-center md:px-4 text-white' >
             {/* <h1 className="text-6xl " >Coming Soon...</h1> */}
 
             <TimerComponent
