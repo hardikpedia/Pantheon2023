@@ -113,10 +113,10 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}
+        className={`md:hidden ${isMenuOpen ? "block" : "hidden"} `}
         id="mobile-menu"
       >
-        <div className="px-2 pt-2 pb-3 sm:px-3 flex justify-evenly">
+        <div className="px-2 pt-2 pb-3 sm:px-3 flex justify-evenly transition ease-in-out delay-150">
           <div>
             <Link href="/">
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
