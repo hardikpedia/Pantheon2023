@@ -20,6 +20,7 @@ function EventPage(props) {
             <div className='lg:flex brightness-100 bg-cover text-white' >
 
 
+                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/recruitmentvideo.png" className=' h-[40%] w-[60%] lg:w-96  lg:h-[80%] rounded-2xl mx-auto lg:mx-0 lg:ml-[5%] lg:mr-[1%] lg:mt-16 lg:pt-0 pt-20 lg:mb-16' alt=""></img>
 
                 <div className='info mb-20 pb-28 backdrop-blur-sm backdrop-brightness-105 bg-black/75 mr-10 ml-[5%] md:ml-[0%] mt-16 lg:mb-16 rounded-2xl div   pl-5'>
@@ -36,7 +37,7 @@ function EventPage(props) {
                     <div className='mt-10'>
                         <span className='font-bold text-2xl '>Description : </span>
                         <div className='text-2xl font-medium ml-1 mr-20 mt-4'>
-                            36 hrs long event in which participants attempt to find text strings, called "flags", which are secretly hidden in purposefully-vulnerable programs or websites. There will be multiple challenges with some points. Team with maximum points wins. Team size can be maximum of 3 members.                        </div>
+                            36 hrs long event in which participants attempt to find text strings, called flags, which are secretly hidden in purposefully-vulnerable programs or websites. There will be multiple challenges with some points. Team with maximum points wins. Team size can be maximum of 3 members.                        </div>
 
 
 
