@@ -5,6 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST(req, res){
     try {
         const body = req.json();
+        console.log(body);
         await dbConnect();
         await User.create(body);
 
@@ -20,4 +21,18 @@ export async function POST(req, res){
         )
     }
 
+}
+
+export async function GET(req, res){
+    const users = [{
+        name: "John Doe",
+        email: "j@email.com"
+    },{
+        name: "John Doe",
+        email: "j@email.com"
+    },{
+        name: "John Doe",
+        email: "j@email.com"
+    }]
+    return NextResponse.json(users)
 }

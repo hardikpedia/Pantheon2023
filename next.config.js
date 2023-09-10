@@ -2,7 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    serverComponentsExternalPackages: ['mongoose'],
+    esmExternals: "loose", // <-- add this
+    serverComponentsExternalPackages: ["mongoose"] // <-- and this
+  },
+
+  webpack: (config) => {
+    config.experiments = {
+      topLevelAwait: true
+    };
+    return config;
   },
   
 }
