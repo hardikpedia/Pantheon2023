@@ -1,23 +1,27 @@
 import dbConnect from "../utils/mongoDB";
-import User from "../models/user";
+import User from "../models/user.js";
 import { NextResponse } from "next/server";
 
-export async function POST(req, res){
-    try {
-        const body = req.json();
-        await dbConnect();
-        await User.create(body);
-
-        return NextResponse.json({
-            message:"Message sent successfully!"
-        }, {
-            status: 200
-        })
-    } catch (error) {
-        return NextResponse.json(
-            { message: "Server error, please try again!" },
-            { status: 500 }
-        )
+export default async function handler(req, res) {
+    if(req.method == "POST"){
+        try {
+            await dbConnect();
+            const body = req.body;
+            const users = await User.create(body);
+            res.status(200).json(users);
+        } catch (error) {
+            res.status(400).json({ success: "server error" });
+        }
+    }
+    if(req.method == "GET"){
+        try {
+            await dbConnect();
+            const users = await User.find({});
+            res.status(200).json(users);
+        } catch (error) {
+            res.status(400).json({ success: "server error" });
+        }
     }
 
+    res.status(404).json({message: 'NO API ROUTE FOUND'})
 }
