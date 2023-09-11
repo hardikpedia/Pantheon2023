@@ -30,7 +30,7 @@ export default function Signup() {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
-        setData({
+        setForm({
             name: '',
             email: '',
             phone: '',
