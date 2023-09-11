@@ -40,7 +40,7 @@ export default function Signup() {
     };
 
     return (
-        <div className="bg-primary bg-[#353858] pt-10 pb-20">
+        <div className="bg-primary bg-black pt-10 pb-20">
             <div className='text-5xl flex justify-center items-center text-white mb-10'>Signup</div>
             <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">

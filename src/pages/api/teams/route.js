@@ -1,5 +1,5 @@
-import dbConnect from "../utils/mongoDB";
-import Team from "../models/team.js";
+import dbConnect from "../../../utils/mongoDB";
+import Team from "../../../models/team.js";
 
 export default async function handler(req, res) {
     if(req.method == 'GET'){

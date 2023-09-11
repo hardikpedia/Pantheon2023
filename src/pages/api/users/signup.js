@@ -1,7 +1,7 @@
-import dbConnect from "../utils/mongoDB";
-import User from "../models/user.js";
+import dbConnect from "../../../utils/mongoDB";
+import User from "../../../models/user.js";
 import { hash } from 'bcryptjs';
-import check_id from "../utils/check_id";
+import check_id from "../../../utils/check_id";
 
 export default async function signup(req, res) {
     if(req.method != 'POST') {
