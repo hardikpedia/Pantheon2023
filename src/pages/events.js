@@ -1,15 +1,20 @@
-import Image from "next/image"
+import EventCard from "@/components/EventCard";
+import Image from "next/image";
 
-const events = () => {
+
+const Events = () => {
+  
+
   return (
-    <div className= 'bg-black text-white h-screen flex items-center justify-center'>
-        <div className='card' >
-            <Image src='/pics.jpeg' alt='poster' height="500" width="320" 
-             className="card-img"
-            />
-        </div>
+    <div className="bg-black bg-primary  w-full justify-center flex flex-wrap gap-[100px] align-center pt-[50px] pb-[50px]">
+        <EventCard />
+        <EventCard />
+        <EventCard />
+        <EventCard />
+        <EventCard />
+        <EventCard />
     </div>
-  )
-}
+  );
+};
 
-export default events
+export default Events;
