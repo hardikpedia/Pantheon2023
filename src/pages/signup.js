@@ -80,7 +80,7 @@ export default function Signup() {
                             value={form.college}
                             handleChange={(e) => handleFormFieldChange('college', e)}
                         />
-                        <div className='flex flex-row  '>
+                        <div className='  '>
                             <FormField
                                 labelName="Password*"
                                 placeholder="Enter new password"
@@ -88,7 +88,7 @@ export default function Signup() {
                                 value={form.password}
                                 handleChange={(e) => handleFormFieldChange('password', e)}
                             />
-                            {pass !== "password" ? <div className='h-fit w-fit mt-[53px] relative right-10  text-white  scale-[1.4]' onClick={handlePass}><AiFillEye /></div> : <div className='absolute -mt-8 right-[10%] lg:right-[18%] text-white scale-[1.4]' onClick={handlePass}><AiFillEyeInvisible /></div>}
+                            {pass !== "password" ? <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEye /></div> : <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEyeInvisible /></div>}
                         </div>
 
 

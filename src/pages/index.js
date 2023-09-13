@@ -14,11 +14,11 @@ export default function Home() {
         <Animation />
 
       </div>
-      <div className='fixed scale-110 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-100 bg-transparent'>
+      <div className='mx-auto absolute top-[30%] md:top-[24%] flex flex-col w-[100%] justify-center items-center  z-100 bg-transparent'>
         <div>
           <Image src="/pantheon_main_white.png" alt="pantheon" width={500} height={500} className=' text-white' />
         </div>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center mt-10 items-center scale-[0.69] sm:scale-75 md:scale-100 '>
           <Landing />
         </div>
 
