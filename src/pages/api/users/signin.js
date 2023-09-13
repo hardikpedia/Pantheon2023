@@ -1,5 +1,5 @@
-import dbConnect from "../../../utils/mongoDB";
-import User from "../../../models/user.js";
+import dbConnect from "@/utils/mongoDB";
+import User from "@/models/user.js";
 import { compare } from "bcryptjs";
 
 export default async function signin(req, res) {

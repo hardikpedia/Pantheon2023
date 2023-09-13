@@ -17,10 +17,10 @@ const TeamSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    team_members:{
-        type: Array,
-        required: true,
-    }
+    team_members: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'User'
+    }]
 }, {
     timestamps: true,
 })
