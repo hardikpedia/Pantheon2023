@@ -39,7 +39,7 @@ export default function Animation() {
           minDistance={5}
           maxDistance={50}
           autoRotate={true}
-          autoRotateSpeed={0.3}
+          autoRotateSpeed={0.5}
         />
         <EffectComposer>
           <Bloom mipmapBlur luminanceThreshold={1} />
