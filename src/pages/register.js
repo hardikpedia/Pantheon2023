@@ -1,8 +1,8 @@
 "use client"
 import { useState } from 'react';
-import JoinModel from '@/components/joinmodel';
+import JoinModel from '@/components/joinTeamPopup';
 import React from 'react'
-import TeamRegisterModel from '@/components/registermodel';
+import TeamRegisterModel from '@/components/registerTeamPopup';
 
 const Register = () => {
 
