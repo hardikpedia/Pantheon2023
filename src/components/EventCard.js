@@ -23,18 +23,23 @@ const EventCard = () => {
             <p className="text-gray-700 text-base">date</p>
             <p className="text-gray-700 text-base">location</p>
         </div>
-        <div
-            className={`absolute bottom-0 left-0 right-0 bg-purple-200 p-2 text-gray-700 ${
-            isHovered ? "opacity-100" : "opacity-0"
-            } transition-opacity duration-300`}
-        >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-            dapibus justo. Sed nec ullamcorper ligula. Nulla facilisi. Fusce
-            bibendum sapien nec ultrices feugiat. Vestibulum ac ipsum quis ex
-            blandit blandit sed at libero. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Phasellus nec dapibus justo. Sed nec ullamcorper
-            ligula. Nulla facilisi. Fusce bibendum sapien nec ultrices feugiat.
-            Vestibulum ac ipsum quis ex blandit blandit sed at libero.
+        <div className="flex flex-col " >
+            <div
+                className={`absolute bottom-0 left-0 right-0 bg-purple-200 p-2 text-gray-700 ${
+                isHovered ? "opacity-100" : "opacity-0"
+                } transition-opacity duration-300`}
+            >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                dapibus justo. Sed nec ullamcorper ligula. Nulla facilisi. Fusce
+                bibendum sapien nec ultrices feugiat. Vestibulum ac ipsum quis ex
+                blandit blandit sed at libero. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Phasellus nec dapibus justo. Sed nec ullamcorper
+                ligula. Nulla facilisi. Fusce bibendum sapien nec ultrices feugiat.
+                Vestibulum ac ipsum quis ex blandit blandit sed at libero.
+
+                
+            </div>
+            <div className="h-[30px] w-[100px] bg-pink" />
         </div>
         </div>
     );
