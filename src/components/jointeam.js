@@ -13,7 +13,7 @@ export default function JoinTeam() {
 
 
 
-    const {teamId} = form;
+    const { teamId } = form;
 
     const handleFormFieldChange = (fieldName, e) => {
         setForm({ ...form, [fieldName]: e.target.value })
@@ -27,19 +27,19 @@ export default function JoinTeam() {
         });
     };
 
-    
+
     return (
-        <div className="bg-primary bg-black pt-10 pb-20">
+        <div className="bg-primary bg-black rounded-md pt-10 pb-20 ">
             <div className='text-5xl flex justify-center items-center text-white mb-10'>Join Team</div>
-            <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
-                <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
+            <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg px-10  '>
+                <div className=" flex justify-center items-center flex-col   ">
                     {/* {isLoading && <Loader />} */}
 
-                    <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
+                    <form onSubmit={onSubmitHandler} className="w-full  mt-[10px] flex flex-col gap-[15px]">
 
 
                         <FormField
-                            labelName="Team Name*"
+                            labelName="Team Id*"
                             placeholder="Enter Team Id to Join"
                             inputType="text"
                             value={form.teamId}

@@ -14,22 +14,22 @@ const Register = () => {
         setCreateTeamModel(false)
     }
 
-    const handleClick = (e) =>{
-        if(e.target.id === 'join'){
+    const handleClick = (e) => {
+        if (e.target.id === 'join') {
             setJoinTeamModel(true)
-        }else if(e.target.id === 'create'){
+        } else if (e.target.id === 'create') {
             setCreateTeamModel(true)
         }
     }
- 
-  return (
-    <div className='bg-black flex flex-col h-screen justify-center items-center' >
-        <div id='join' onClick={handleClick} className='text-white cursor-pointer' > Join a team </div>
-        <div id='create' onClick={handleClick} className='text-white cursor-pointer' > Create a team </div>
-        <JoinModel onClose={handleOnClose} visible={joinTeamModel} />
-        <TeamRegisterModel onClose={handleOnClose} visible={createTeamModel} />
-    </div>
-  )
+
+    return (
+        <div className='bg-black flex flex-col h-screen justify-center items-center' >
+            <div id='join' onClick={handleClick} className='text-white cursor-pointer' > Join a team </div>
+            <div id='create' onClick={handleClick} className='text-white cursor-pointer' > Create a team </div>
+            <JoinModel onClose={handleOnClose} visible={joinTeamModel} />
+            <TeamRegisterModel onClose={handleOnClose} visible={createTeamModel} />
+        </div>
+    )
 }
 
 export default Register
