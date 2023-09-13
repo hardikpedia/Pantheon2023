@@ -1,7 +1,8 @@
 import Navbar from '@/components/Navbar';
 import '@/styles/globals.css'
 import Head from 'next/head'
-
+import { StateContextProvider } from '@/context';
+import NonSSRWrapper from '@/components/NoSSR';
 export function Home() {
   return (
     <div>
@@ -14,11 +15,14 @@ export function Home() {
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-      {/* <Navbar /> */}
-      <Home />
-      <Component {...pageProps} />
-    </>
+    <NonSSRWrapper>
+      <StateContextProvider>
+        {/* <Navbar /> */}
+        <Home />
+        <Component {...pageProps} />
+      </StateContextProvider>
+
+    </NonSSRWrapper>
   );
 
 
