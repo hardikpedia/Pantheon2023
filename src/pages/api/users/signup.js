@@ -1,13 +1,9 @@
-import dbConnect from "../../../utils/mongoDB";
-import User from "../../../models/user.js";
+import dbConnect from "@/utils/mongoDB";
+import User from "@/models/user.js";
 import { hash } from 'bcryptjs';
-import check_id from "../../../utils/check_id";
+import { randomUUID } from 'crypto';
 
 export default async function signup(req, res) {
-    if(req.method != 'POST') {
-        res.status(404).json({ 'message': "Incorrect request" });
-        return;
-    }
     await dbConnect();
     const { name, email, phone, college, password } = req.body;
 
@@ -31,9 +27,9 @@ export default async function signup(req, res) {
         res.status(404).json({ 'message': 'Error occured while hashing' });
     }
 
+    const uuid = randomUUID();
 
-
-    const pantheonid = "pantheon-" + toString(await check_id());
+    const pantheonid = "pantheon-" + uuid;
 
     const created = new User({
         name: name,
@@ -41,7 +37,8 @@ export default async function signup(req, res) {
         phone: phone,
         password: hashedPassword,
         college: college,
-        pantheonid: pantheonid
+        pantheonid: pantheonid,
+        team: "null"
     });
     try {
         await created.save();
