@@ -3,6 +3,7 @@ import { useState } from 'react';
 import JoinModel from '@/components/joinTeamPopup';
 import React from 'react'
 import TeamRegisterModel from '@/components/registerTeamPopup';
+import Image from 'next/image';
 
 const Register = () => {
 
@@ -24,8 +25,13 @@ const Register = () => {
 
     return (
         <div className='bg-black flex flex-col h-screen justify-center items-center' >
-            <div id='join' onClick={handleClick} className='text-white cursor-pointer' > Join a team </div>
-            <div id='create' onClick={handleClick} className='text-white cursor-pointer' > Create a team </div>
+            <Image className='absolute top-40' src = '/Pantheon_Emblem_White.png' alt='pantheon logo' height={200} width={200} />
+            <div id='join' onClick={handleClick} className='text-white cursor-pointer m-10' > Hello Prateek </div>
+            <div id='join' onClick={handleClick} className='text-white cursor-pointer ' > Your Pantheon ID is  </div>
+            <div id='join' onClick={handleClick} className='text-white cursor-pointer mb-7' > PANTHEON12345 </div>
+            
+            <div id='join' onClick={handleClick} className='m-2 cursor-pointer font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[10px] bg-gradient-to-r from-purple-400 to-pink-600 flex items-center justify-center' > Join a team </div>
+            <div id='create' onClick={handleClick} className='m-2 cursor-pointer font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[10px] bg-gradient-to-r from-purple-400 to-pink-600 flex items-center justify-center'  > Create a team </div>
             <JoinModel onClose={handleOnClose} visible={joinTeamModel} />
             <TeamRegisterModel onClose={handleOnClose} visible={createTeamModel} />
         </div>
