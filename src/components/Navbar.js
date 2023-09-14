@@ -6,29 +6,26 @@ const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    console.log("toggled")
     setMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="bg-black ">
-      <div className=" mx-auto px-10 lg:px-12">
+    <nav className="bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            {/* <Link href="/"> */}
-            <Image
-              src="/Pantheon_Emblem_White.png"
-              alt="pantheon"
-              width={40}
-              height={40}
-              onClick={() => { console.log("i got clicked") }}
-              className="cursor-pointer"
-            />
-            {/* </Link> */}
+            <Link href="/">
+              <Image
+                src="/Pantheon_Emblem_White.png"
+                alt="pantheon"
+                width={40}
+                height={40}
+              />
+            </Link>
           </div>
           <div className="flex items-center">
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline lg:space-x-4 space-x-3 ">
+              <div className="ml-10 flex items-baseline space-x-4">
                 <Link href="/">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Home
@@ -74,7 +71,7 @@ const Navbar = () => {
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
-              onClick={() => { console.log("clicked") }}
+              onClick={toggleMenu}
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
               aria-controls="mobile-menu"
