@@ -26,7 +26,7 @@ function ShootingStar() {
 
 
 export default function Animation() {
-  
+
   return (
     <div className='h-screen ' >
       <Canvas className='fixed' camera={{ position: [0, 0, 15] }}>
@@ -38,6 +38,8 @@ export default function Animation() {
         <OrbitControls
           minDistance={5}
           maxDistance={50}
+          autoRotate={true}
+          autoRotateSpeed={0.5}
         />
         <EffectComposer>
           <Bloom mipmapBlur luminanceThreshold={1} />
