@@ -1,8 +1,13 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
+import CustomButton from "./CustomButton";
 
 const EventCard = () => {
     const [isHovered, setIsHovered] = useState(false);
+
+    const handleClick = () => {
+        console.log("clicked");
+    }
 
     return (
         <div
@@ -16,16 +21,16 @@ const EventCard = () => {
         <img
             src="recruitmentvideo.png"
             alt="title"
-            className="w-full h-350 object-cover"
+            className="w-full h-350 object-cover rounded-t-lg"
         />
-        <div className="px-6 py-4 bg-purple-200">
+        <div className="px-6 py-4 bg-gradient-to-r from-purple-400 to-pink-600">
             <div className="font-bold text-xl mb-2 text-gray-700">title</div>
             <p className="text-gray-700 text-base">date</p>
             <p className="text-gray-700 text-base">location</p>
         </div>
-        <div className="flex flex-col " >
+        <div className="flex flex-col rounded-b-lg" >
             <div
-                className={`absolute bottom-0 left-0 right-0 bg-purple-200 p-2 text-gray-700 ${
+                className={`absolute bottom-0 left-0 right-0 bg-gradient-to-r from-purple-400 to-pink-600 p-2 text-gray-700 ${
                 isHovered ? "opacity-100" : "opacity-0"
                 } transition-opacity duration-300`}
             >
@@ -39,7 +44,6 @@ const EventCard = () => {
 
                 
             </div>
-            <div className="h-[30px] w-[100px] bg-pink" />
         </div>
         </div>
     );

@@ -4,6 +4,7 @@ import JoinModel from '@/components/joinTeamPopup';
 import React from 'react'
 import TeamRegisterModel from '@/components/registerTeamPopup';
 import { useStateContext } from '@/context';
+import Image from 'next/image';
 
 const Register = () => {
     const { user, userinfo, setUser, setUserInfo } = useStateContext();
@@ -25,8 +26,15 @@ const Register = () => {
 
     return (
         <div className='bg-black flex flex-col h-screen justify-center items-center' >
-            <div id='join' onClick={handleClick} className='text-white cursor-pointer' > Join a team </div>
-            <div id='create' onClick={handleClick} className='text-white cursor-pointer' > Create a team </div>
+            <Image className=' mb-4' src = '/Pantheon_Emblem_White.png' alt='pantheon logo' height={200} width={200} />
+            <div className='flex flex-col justify-center items-center mt-15'>
+                <div id='join' onClick={handleClick} className='text-white cursor-pointer top-35 ' > Hello {userinfo.name} </div>
+                <div id='join' onClick={handleClick} className='text-white cursor-pointer ' > Your Pantheon ID is  </div>
+                <div id='join' onClick={handleClick} className='text-white cursor-pointer mb-7' > {userinfo.pantheonid} </div>
+                
+                <div id='join' onClick={handleClick} className='m-2 cursor-pointer font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[10px] bg-gradient-to-r from-purple-400 to-pink-600 flex items-center justify-center' > Join a team </div>
+                <div id='create' onClick={handleClick} className='m-2 cursor-pointer font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[10px] bg-gradient-to-r from-purple-400 to-pink-600 flex items-center justify-center'  > Create a team </div>
+            </div>
             <JoinModel onClose={handleOnClose} visible={joinTeamModel} id={userinfo.pantheonid} />
             <TeamRegisterModel onClose={handleOnClose} visible={createTeamModel} id={userinfo.pantheonid} />
         </div>
