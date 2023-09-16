@@ -6,15 +6,14 @@ import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
 
-export default function TeamRegister() {
+export default function TeamRegister({ id }) {
     const [form, setForm] = useState({
-        teamName: '',
-        teamId: '',
+        teamName: ''
     });
 
 
 
-    const { teamName, teamId } = form;
+    const { teamName } = form;
 
     const handleFormFieldChange = (fieldName, e) => {
         setForm({ ...form, [fieldName]: e.target.value })
@@ -22,10 +21,20 @@ export default function TeamRegister() {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
-        console.log(form);
+        const response = await fetch('api/teams/create', {
+            method: 'POST',
+            body: JSON.stringify({
+                pantheonid: id,
+                team_name: form.teamName
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const res = await response.json();
+        const join_code = res['join_code'];
         setForm({
-            teamName: '',
-            teamId: '',
+            teamName: ''
         });
     };
 

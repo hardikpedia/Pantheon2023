@@ -6,7 +6,7 @@ import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
 
-export default function JoinTeam() {
+export default function JoinTeam({ id }) {
     const [form, setForm] = useState({
         teamId: '',
     });
@@ -21,10 +21,21 @@ export default function JoinTeam() {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
-        console.log(form);
+        const res = await fetch('api/teams/add', {
+            method: 'POST',
+            body: JSON.stringify({
+                join_code: form.teamId,
+                pantheonid: id
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const response = await res.json();
         setForm({
             teamId: '',
         });
+        
     };
 
 

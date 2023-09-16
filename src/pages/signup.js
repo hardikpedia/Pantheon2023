@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import Image from 'next/image';
+import { useRouter } from 'next/router';
 import FormField from '@/components/FormField';
 import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
-
+import { useStateContext } from '@/context';
 
 export default function Signup() {
+    const router = useRouter();
+    const { user, userinfo, setUser, setUserInfo } = useStateContext();
     const [form, setForm] = useState({
         name: '',
         email: '',
@@ -30,6 +32,27 @@ export default function Signup() {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
+        const response = await fetch('api/users/signup', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: form.name,
+                email: form.email,
+                phone: form.phone,
+                college: form.college,
+                password: form.password
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const data = await response.json();
+        const id = data['ID'];
+        setUser(true);
+        setUserInfo({
+            name: form.name,
+            pantheonid: id,
+            email: form.email
+        });
         setForm({
             name: '',
             email: '',
@@ -37,6 +60,7 @@ export default function Signup() {
             college: '',
             password: ''
         });
+        router.push('/register');
     };
 
     return (

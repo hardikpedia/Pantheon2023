@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import Image from 'next/image';
+import { useRouter } from 'next/router';
 import FormField from '@/components/FormField';
 import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
-
+import { useStateContext } from '@/context';
 
 export default function LoginIn() {
+    const router = useRouter();
+    const { user, userinfo, setUser, setUserInfo } = useStateContext();
     const [form, setForm] = useState({
         email: '',
         password: ''
@@ -27,10 +29,28 @@ export default function LoginIn() {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
+        const response = await fetch('api/users/signin', {
+            method: 'POST',
+            body: JSON.stringify({
+                email: form.email,
+                password: form.password
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const res = await response.json();
+        setUser(true);
+        setUserInfo({ 
+            name: res['name'],
+            pantheonid: res['ID'],
+            email: form.email
+        });
         setForm({
             email: '',
             password: ''
         });
+        router.push('/register');
     };
 
     return (

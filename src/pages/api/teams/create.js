@@ -5,10 +5,7 @@ import { randomUUID } from 'crypto';
 import mongoose from "mongoose";
 
 export default async function create(req, res) {
-    if(req.method != 'POST') {
-        res.status(404).json({ 'message': "Incorrect request" });
-        return;
-    }
+    if(req.method != 'POST') return res.status(404).json({ 'message': "Incorrect request" });
     await dbConnect();
     const { pantheonid, team_name } = req.body;
 
@@ -16,14 +13,11 @@ export default async function create(req, res) {
     try {
         user = await User.findOne({ pantheonid: pantheonid });
     } catch (err) {
-        res.status(500).json({ 'message': 'Internal Server Error' });
+        return res.status(500).json({ 'message': 'Internal Server Error' });
     }
-    if(!user) {
-        res.status(404).json({ 'message': 'User does not exists' });
-        return;
-    }
+    if(!user) return res.status(404).json({ 'message': 'User does not exists' });
 
-    if(user.team != "null") res.status(201).json({ 'ID': -1 });
+    if(user.team != "null") return res.status(201).json({ 'ID': -1 });
     const code = randomUUID();
     const members = [];
     members.push(user);
@@ -42,7 +36,7 @@ export default async function create(req, res) {
         await user.save({ session: sess });
         await sess.commitTransaction();
     } catch(err) {
-        res.status(500).json({ 'message': 'Internal Server Error' });
+        return res.status(500).json({ 'message': 'Internal Server Error' });
     }
-    res.status(201).json({ 'join_code': code });
+    return res.status(201).json({ 'join_code': code });
 }
