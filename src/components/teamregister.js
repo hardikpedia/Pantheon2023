@@ -4,9 +4,11 @@ import Image from 'next/image';
 import FormField from '@/components/FormField';
 import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
-
+import Loader from './Loader';
 
 export default function TeamRegister({ id }) {
+    const [isLoading, setIsLoading] = useState(false);
+
     const [form, setForm] = useState({
         teamName: ''
     });
@@ -21,6 +23,7 @@ export default function TeamRegister({ id }) {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
         const response = await fetch('api/teams/create', {
             method: 'POST',
             body: JSON.stringify({
@@ -32,6 +35,7 @@ export default function TeamRegister({ id }) {
             }
         });
         const res = await response.json();
+        setIsLoading(false);
         const join_code = res['join_code'];
         setForm({
             teamName: ''
@@ -43,7 +47,7 @@ export default function TeamRegister({ id }) {
             <div className='text-5xl flex justify-center items-center text-white mb-10'>Create Team</div>
             <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg px-10  '>
                 <div className=" flex justify-center items-center flex-col   ">
-                    {/* {isLoading && <Loader />} */}
+                    {isLoading && <Loader />}
 
                     <form onSubmit={onSubmitHandler} className="w-full  mt-[10px] flex flex-col gap-[15px]">
 

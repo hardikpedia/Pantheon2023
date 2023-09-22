@@ -4,9 +4,10 @@ import Image from 'next/image';
 import FormField from '@/components/FormField';
 import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
-
+import Loader from './Loader';
 
 export default function JoinTeam({ id }) {
+    const [isLoading, setIsLoading] = useState(false);
     const [form, setForm] = useState({
         teamId: '',
     });
@@ -21,6 +22,7 @@ export default function JoinTeam({ id }) {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
         const res = await fetch('api/teams/add', {
             method: 'POST',
             body: JSON.stringify({
@@ -32,10 +34,11 @@ export default function JoinTeam({ id }) {
             }
         });
         const response = await res.json();
+        setIsLoading(false);
         setForm({
             teamId: '',
         });
-        
+
     };
 
 
@@ -44,7 +47,7 @@ export default function JoinTeam({ id }) {
             <div className='text-5xl flex justify-center items-center text-white mb-10'>Join Team</div>
             <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg px-10  '>
                 <div className=" flex justify-center items-center flex-col   ">
-                    {/* {isLoading && <Loader />} */}
+                    {isLoading && <Loader />}
 
                     <form onSubmit={onSubmitHandler} className="w-full  mt-[10px] flex flex-col gap-[15px]">
 
