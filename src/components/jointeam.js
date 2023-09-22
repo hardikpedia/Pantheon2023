@@ -62,7 +62,7 @@ export default function JoinTeam({ id }) {
                                 btnType="submit"
                                 title="Join Team"
                                 handleClick={onSubmitHandler}
-                                styles="bg-[#1dc071]"
+                                styles=""
                             />
                         </div>
                     </form>

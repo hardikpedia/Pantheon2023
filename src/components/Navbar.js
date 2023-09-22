@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useStateContext } from "@/context";
 
 const Navbar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
 
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const { user, userinfo, setUser, setUserInfo } = useStateContext();
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -36,11 +38,21 @@ const Navbar = () => {
                     About
                   </p>
                 </Link>
-                <Link href="/">
-                  <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    Register
-                  </p>
-                </Link>
+                {
+                  user ? (
+                    <Link href="/profile">
+                      <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        Profile
+                      </p>
+                    </Link>
+                  ) : (
+                    <Link href="/signup">
+                      <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        Register
+                      </p>
+                    </Link>
+                  )
+                }
                 <Link href="/">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Events

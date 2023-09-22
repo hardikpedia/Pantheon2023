@@ -61,7 +61,7 @@ export default function TeamRegister({ id }) {
                                 btnType="submit"
                                 title="Create Team"
                                 handleClick={onSubmitHandler}
-                                styles="bg-[#1dc071]"
+                                styles=""
                             />
                         </div>
                     </form>

@@ -121,7 +121,7 @@ export default function Signup() {
                                 btnType="submit"
                                 title="Sign Up"
                                 handleClick={onSubmitHandler}
-                                styles="bg-[#1dc071]"
+                                styles=""
                             />
                         </div>
                     </form>
