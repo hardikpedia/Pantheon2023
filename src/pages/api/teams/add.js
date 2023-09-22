@@ -27,5 +27,5 @@ export default async function add(req, res, next) {
     } catch (err) {
         return res.status(500).json({ 'message': 'Internal Server Error' });
     }
-    return res.status(201).json({ 'join_code': join_code });
+    return res.status(201).json({ 'message': "Successfully Joined" });
 }

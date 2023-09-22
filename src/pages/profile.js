@@ -42,8 +42,12 @@ const Register = () => {
         )
     }else{
         return(
-            <div className='bg-black flex h-screen justify-center items-center pb-20' >
-                <div className='text-center flex-1 font-poppins font-semibold text-[40px] lg:text-[52px] text-white  leading-[50px] lg:leading-[75px]' > Please Login First </div>
+            <div className='bg-black flex md:flex-row flex-col h-screen justify-evenly items-center pb-20' >
+                <Image className='' src = '/Pantheon_Emblem_White.png' alt='pantheon logo' height={200} width={200} />
+                <div className='flex flex-col justify-center items-center mt-15'>
+                    <div id='join' onClick={handleClick} className=' text-center font-poppins font-semibold text-[40px] lg:text-[52px] text-white  leading-[50px] lg:leading-[75px]' > Welcome to Pantheon </div>
+                    <div id='join' onClick={handleClick} className='font-poppins font-normal text-white/50 text-[18px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Please Login First </div>
+                </div>
             </div>
         )
     }

@@ -44,7 +44,15 @@ export default function LoginIn() {
             }
         });
         const res = await response.json();
+<<<<<<< HEAD
         setIsLoading(false);
+=======
+        if(!res.ok){
+            alert(res.message)
+            return;
+        }
+
+>>>>>>> 206126c6e76c61707ce425c7ab1d4e144e9bfc59
         setUser(true);
         setUserInfo({
             name: res['name'],
@@ -55,12 +63,16 @@ export default function LoginIn() {
             email: '',
             password: ''
         });
-        router.push('/register');
+        router.push('/profile');
     };
 
+    const handleClik = () => {
+        router.push('/signup');
+    }   
+
     return (
-        <div className="bg-primary h-screen bg-black pt-40 pb-20">
-            <div className='text-5xl flex justify-center items-center text-white mb-10'>Login</div>
+        <div className="bg-primary h-screen bg-black pt-20 pb-20">
+            <div className='text-5xl flex justify-center items-center text-white mb-3 font-bold'>LOGIN</div>
             <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
                     {isLoading && <Loader />}
@@ -86,7 +98,7 @@ export default function LoginIn() {
                             {pass !== "password" ? <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEye /></div> : <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEyeInvisible /></div>}
                         </div>
 
-
+                        <div className='font-poppins font-normal text-white/50 text-[18px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Don&#39;t have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > Signup? </span>  </div>
                         <div className="flex justify-center items-center mt-[30px]">
                             <CustomButton
                                 btnType="submit"
