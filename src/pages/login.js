@@ -44,15 +44,12 @@ export default function LoginIn() {
             }
         });
         const res = await response.json();
-<<<<<<< HEAD
         setIsLoading(false);
-=======
         if(!res.ok){
             alert(res.message)
             return;
         }
 
->>>>>>> 206126c6e76c61707ce425c7ab1d4e144e9bfc59
         setUser(true);
         setUserInfo({
             name: res['name'],
