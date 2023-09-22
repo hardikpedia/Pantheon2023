@@ -12,11 +12,10 @@ export default async function signup(req, res) {
     try {
         existingUser = await User.findOne({ email: email });
     } catch (err) {
-        res.status(500).json({ 'message': 'Internal Server Error' });
+        return res.status(500).json({ 'message': 'Internal Server Error' });
     }
     if(existingUser) {
-        res.status(404).json({ 'message': 'User already exists' });
-        return;
+        return res.status(404).json({ 'message': 'User already exists' });
     }
 
     //generate hash
@@ -24,7 +23,7 @@ export default async function signup(req, res) {
     try {
         hashedPassword = await hash(password, 5);
     } catch (err) {
-        res.status(404).json({ 'message': 'Error occured while hashing' });
+        return res.status(404).json({ 'message': 'Error occured while hashing' });
     }
 
     const uuid = randomUUID();
@@ -43,7 +42,7 @@ export default async function signup(req, res) {
     try {
         await created.save();
     } catch(err) {
-        res.status(500).json({ 'message': 'Internal Server Error' });
+        return res.status(500).json({ 'message': 'Internal Server Error' });
     }
-    res.status(201).json({ 'ID': pantheonid });
+    return res.status(201).json({ 'ID': pantheonid });
 }
