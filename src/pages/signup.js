@@ -4,8 +4,11 @@ import FormField from '@/components/FormField';
 import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import { useStateContext } from '@/context';
+import Loader from '@/components/Loader';
 
 export default function Signup() {
+    const [isLoading, setIsLoading] = useState(false);
+
     const router = useRouter();
     const { user, userinfo, setUser, setUserInfo } = useStateContext();
     const [form, setForm] = useState({
@@ -32,6 +35,7 @@ export default function Signup() {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
         const response = await fetch('api/users/signup', {
             method: 'POST',
             body: JSON.stringify({
@@ -46,6 +50,7 @@ export default function Signup() {
             }
         });
         const data = await response.json();
+        setIsLoading(false);
         const id = data['ID'];
         setUser(true);
         setUserInfo({
@@ -68,7 +73,7 @@ export default function Signup() {
             <div className='text-5xl flex justify-center items-center text-white mb-10'>Signup</div>
             <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
-                    {/* {isLoading && <Loader />} */}
+                    {isLoading && <Loader />}
 
                     <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
 
