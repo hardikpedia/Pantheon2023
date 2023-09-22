@@ -24,8 +24,8 @@ const Register = () => {
     }
 
     return (
-        <div className='bg-black flex flex-col h-screen justify-center items-center' >
-            <Image className=' mb-4' src = '/Pantheon_Emblem_White.png' alt='pantheon logo' height={200} width={200} />
+        <div className='bg-black flex flex-col h-screen justify-evenly items-center pb-20' >
+            <Image className='' src = '/Pantheon_Emblem_White.png' alt='pantheon logo' height={200} width={200} />
             <div className='flex flex-col justify-center items-center mt-15'>
                 <div id='join' onClick={handleClick} className='text-white cursor-pointer top-35 ' > Hello Prateek </div>
                 <div id='join' onClick={handleClick} className='text-white cursor-pointer ' > Your Pantheon ID is  </div>
