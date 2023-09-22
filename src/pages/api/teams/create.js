@@ -30,13 +30,18 @@ export default async function create(req, res) {
         team_members: members
     });
     try {
-        const sess = await mongoose.startSession();
-        sess.startTransaction();
-        await created.save({ session: sess });
-        await user.save({ session: sess });
-        await sess.commitTransaction();
+        // const sess = await mongoose.startSession();
+        // sess.startTransaction();
+        // await created.save({ session: sess });
+        // await user.save({ session: sess });
+        // await sess.commitTransaction();
+        console.log(created);
+        const team = await Team.create(created);
+        await user.save();
+        res.status(201).json(team)
+        
     } catch(err) {
-        return res.status(500).json({ 'message': 'Internal Server Error' });
+        return res.status(500).json(err);
     }
     return res.status(201).json({ 'join_code': code });
 }
