@@ -12,8 +12,8 @@ const Navbar = () => {
 
   const handleLogout = () => {
     setUser(false);
-    setUserInfo({})
-  }
+    setUserInfo({});
+  };
 
   return (
     <nav className="bg-black">
@@ -37,7 +37,7 @@ const Navbar = () => {
                     Home
                   </p>
                 </Link>
-                <Link href="/">
+                <Link href="/about">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     About
                   </p>
@@ -55,40 +55,41 @@ const Navbar = () => {
                     </p>
                   </Link>
                 )}
-                <Link href="/">
+                <Link href="/events">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Events
                   </p>
                 </Link>
-                <Link href="/">
+                <Link href="/leaderboard">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Leaderboard
                   </p>
                 </Link>
-                <Link href="/">
+                <Link href="/sponsors">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Sponsors
                   </p>
                 </Link>
-                <Link href="/">
+                <Link href="/faq">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     FAQs
                   </p>
                 </Link>
-                <Link href="/">
+                <Link href="/contact">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Contact
                   </p>
                 </Link>
-                {
-                  user && (
-                    <Link href="/">
-                      <p onClick={handleLogout} className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        Logout
-                      </p>
-                    </Link>
-                  )
-                }
+                {user && (
+                  <Link href="/">
+                    <p
+                      onClick={handleLogout}
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Logout
+                    </p>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -146,7 +147,7 @@ const Navbar = () => {
                 Home
               </p>
             </Link>
-            <Link href="/">
+            <Link href="/about">
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 About
               </p>
@@ -164,33 +165,43 @@ const Navbar = () => {
                 </p>
               </Link>
             )}
-            <Link href="/">
+            <Link href="/events">
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Events
               </p>
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/leaderboard">
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Leaderboard
               </p>
             </Link>
-            <Link href="/">
+            <Link href="/sponsors">
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Sponsors
               </p>
             </Link>
-            <Link href="/">
+            <Link href="/faq">
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 FAQs
               </p>
             </Link>
-            <Link href="/">
+            <Link href="/contact">
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Contact
               </p>
             </Link>
+            {user && (
+              <Link href="/">
+                <p
+                  onClick={handleLogout}
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Logout
+                </p>
+              </Link>
+            )}
           </div>
         </div>
       </div>

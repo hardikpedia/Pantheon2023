@@ -40,6 +40,11 @@ export default function LoginIn() {
             }
         });
         const res = await response.json();
+        if(!res.ok){
+            alert(res.message)
+            return;
+        }
+
         setUser(true);
         setUserInfo({ 
             name: res['name'],
@@ -58,7 +63,7 @@ export default function LoginIn() {
     }   
 
     return (
-        <div className="bg-primary h-screen bg-black pt-40 pb-20">
+        <div className="bg-primary h-screen bg-black pt-20 pb-20">
             <div className='text-5xl flex justify-center items-center text-white mb-3 font-bold'>LOGIN</div>
             <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">

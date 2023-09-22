@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
   return (
     <NonSSRWrapper>
       <StateContextProvider>
-        <Navbar />
+        {/* <Navbar /> */}
         <Home />
         <Component {...pageProps} />
         <Analytics/>
