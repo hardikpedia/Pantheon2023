@@ -4,12 +4,16 @@ import Image from "next/image";
 import { useStateContext } from "@/context";
 
 const Navbar = () => {
-
   const [isMenuOpen, setMenuOpen] = useState(false);
   const { user, userinfo, setUser, setUserInfo } = useStateContext();
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+
+  const handleLogout = () => {
+    setUser(false);
+    setUserInfo({})
+  }
 
   return (
     <nav className="bg-black">
@@ -38,21 +42,19 @@ const Navbar = () => {
                     About
                   </p>
                 </Link>
-                {
-                  user ? (
-                    <Link href="/profile">
-                      <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        Profile
-                      </p>
-                    </Link>
-                  ) : (
-                    <Link href="/signup">
-                      <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        Register
-                      </p>
-                    </Link>
-                  )
-                }
+                {user ? (
+                  <Link href="/profile">
+                    <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      Profile
+                    </p>
+                  </Link>
+                ) : (
+                  <Link href="/login">
+                    <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      Login
+                    </p>
+                  </Link>
+                )}
                 <Link href="/">
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Events
@@ -78,6 +80,15 @@ const Navbar = () => {
                     Contact
                   </p>
                 </Link>
+                {
+                  user && (
+                    <Link href="/">
+                      <p onClick={handleLogout} className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        Logout
+                      </p>
+                    </Link>
+                  )
+                }
               </div>
             </div>
           </div>
@@ -140,11 +151,19 @@ const Navbar = () => {
                 About
               </p>
             </Link>
-            <Link href="/">
-              <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Register
-              </p>
-            </Link>
+            {user ? (
+              <Link href="/profile">
+                <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Profile
+                </p>
+              </Link>
+            ) : (
+              <Link href="/login">
+                <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Login
+                </p>
+              </Link>
+            )}
             <Link href="/">
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Events
