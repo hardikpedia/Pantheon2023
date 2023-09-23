@@ -44,8 +44,8 @@ const Sponsors = ({ data }) => {
 </h1>
             
               <EventsContainer>
-                {learnSponosor1.map((sponsor) => {
-                  return <SponsorBox data={sponsor} />;
+                {learnSponosor1.map((sponsor,index) => {
+                  return <SponsorBox data={sponsor} key={index} />;
                 })}
               </EventsContainer>
               
