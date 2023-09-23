@@ -31,7 +31,7 @@ const Sponsors = ({ data }) => {
       <div className="  overflow-hidden  ">
         <div
           style={{ backgroundImage: ` url(${`images/bg.jpg`})` }}
-          className=" h-full w-[100%] bg-cover bg-black"
+          className=" w-full justify-center items-center bg-cover bg-black"
         >
           <div className="pt-8">
             <SectionContainer id="sponsors">

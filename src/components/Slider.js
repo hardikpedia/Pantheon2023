@@ -24,7 +24,7 @@ const Sliderss = () => {
     <>
     
     <div
-      className={`${styles.section} hidden sm:block bg-white py-10 px-5 mb-12 cursor-pointer rounded-xl`}
+      className={`${styles.section}  sm:block bg-white py-10 px-5 mb-12 cursor-pointer rounded-xl`}
     >
 
 <div >
