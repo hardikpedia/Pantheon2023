@@ -1,13 +1,13 @@
+"use client"
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 import CustomButton from "./CustomButton";
+import Image from "next/image";
 
 const EventCard = () => {
     const [isHovered, setIsHovered] = useState(false);
 
-    const handleClick = () => {
-        console.log("clicked");
-    }
+
 
     return (
         <div
@@ -17,11 +17,12 @@ const EventCard = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-            src="recruitmentvideo.png"
+        <Image
+            src="/recruitmentvideo.png"
             alt="title"
-            className="w-full h-350 object-cover rounded-t-lg"
+            height={350}
+            width={320}
+            className="object-cover rounded-t-lg"
         />
         <div className="px-6 py-4 bg-gray-300">
             <div className="font-bold text-xl mb-2 text-gray-700">Title</div>

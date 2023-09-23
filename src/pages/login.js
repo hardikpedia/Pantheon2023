@@ -44,20 +44,19 @@ export default function LoginIn() {
             }
         });
         const res = await response.json();
-<<<<<<< HEAD
         setIsLoading(false);
-=======
-        if(!res.ok){
+        console.log(response.status);
+        if(!response.ok){
             alert(res.message)
             return;
         }
 
->>>>>>> 206126c6e76c61707ce425c7ab1d4e144e9bfc59
         setUser(true);
         setUserInfo({
             name: res['name'],
             pantheonid: res['ID'],
-            email: form.email
+            email: form.email,
+            teamID: res['code']
         });
         setForm({
             email: '',
@@ -87,7 +86,7 @@ export default function LoginIn() {
                             handleChange={(e) => handleFormFieldChange('email', e)}
                         />
 
-                        <div className='  '>
+                        <div className=' '>
                             <FormField
                                 labelName="Password*"
                                 placeholder="Enter new password"

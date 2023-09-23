@@ -56,7 +56,8 @@ export default function Signup() {
         setUserInfo({
             name: form.name,
             pantheonid: id,
-            email: form.email
+            email: form.email,
+            team: "null"
         });
         setForm({
             name: '',
