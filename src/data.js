@@ -4,36 +4,36 @@
 
 //NewSponsors
 
-import InterviewBuddy from '../assets/recruitmentvideo.png'
+import InterviewBuddy from './assets/recruitmentvideo.png'
 
-import Finstreet from '../assets/recruitmentvideo.png'
+import Finstreet from './assets/recruitmentvideo.png'
 
-import MFL_Educlub from '../assets/recruitmentvideo.png'
-import LearningWhileTravelling from '../assets/recruitmentvideo.png'
-import GrowthSchool from '../assets/pics.jpeg'
+import MFL_Educlub from './assets/recruitmentvideo.png'
+import LearningWhileTravelling from './assets/recruitmentvideo.png'
+import GrowthSchool from './assets/pics.jpeg'
 
-import BlueHillPublication from '../assets/recruitmentvideo.png'
+import BlueHillPublication from './assets/recruitmentvideo.png'
 
-import Edufabrica from '../assets/recruitmentvideo.png'
+import Edufabrica from './assets/recruitmentvideo.png'
 
-import Codingal from '../assets/recruitmentvideo.png'
+import Codingal from './assets/recruitmentvideo.png'
 
-import CodingNinjas from '../assets/recruitmentvideo.png'
+import CodingNinjas from './assets/recruitmentvideo.png'
 
-import gfg from '../assets/recruitmentvideo.png'
+import gfg from './assets/recruitmentvideo.png'
 
-import stockedge from '../assets/recruitmentvideo.png'
+import stockedge from './assets/recruitmentvideo.png'
 
-import devtown from '../assets/recruitmentvideo.png'
+import devtown from './assets/recruitmentvideo.png'
 
-import yhills from "../assets/recruitmentvideo.png"
+import yhills from "./assets/recruitmentvideo.png"
 
-import gdsc from "../assets/recruitmentvideo.png"
-import devdun from "../assets/recruitmentvideo.png"
+import gdsc from "./assets/recruitmentvideo.png"
+import devdun from "./assets/recruitmentvideo.png"
 
-import myways from '../assets/recruitmentvideo.png'
+import myways from './assets/recruitmentvideo.png'
 
-import fincess from "../assets/recruitmentvideo.png"
+import fincess from "./assets/recruitmentvideo.png"
 
 
 

@@ -17,7 +17,7 @@ import {
   learnSponosor,
   startSponsor,
   copowSponsor,
-} from "./data";
+} from "../data";
 import { sponsors,TitleSponsor1,
   copreSponsor1,
   associationSponsor1,mediaSponsor1,learnSponosor1,
