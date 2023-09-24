@@ -25,11 +25,11 @@ const Register = () => {
         }
     }
     useEffect(()=>{
-        if(userinfo.team != "null"){
+        if(userinfo.teamID != "null"){
             setJoinTeamModel(false)
             setCreateTeamModel(false)
         }
-    }, [userinfo.team])
+    }, [userinfo.teamID])
     
     if(user) {
         return (
