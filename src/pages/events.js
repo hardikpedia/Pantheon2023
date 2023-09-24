@@ -5,7 +5,8 @@ import data from "@/utils/bible.json";
 import StarsCanvas from "@/components/StarsEvent";
 
 const Events = () => {
-  const screen = window.innerWidth >= 768 ? 0.0009 : 0.0002;
+  
+  const screen = window.innerWidth >= 768 ? 0.0006 : 0.0002;
 
   return (
     <div className="bg-black z-0 relative">
