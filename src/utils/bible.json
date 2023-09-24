@@ -264,5 +264,141 @@
             "contact": ["Yashdev Tiwari - 6393115243", "Kartik Doley - 8169217376", "Piyush Raj - 9939175648"]
         }
     ],
-    "day3": []
+    "day3": [
+        {
+            "event": "Wiki Wars",
+            "club": "BIOTS",
+            "category": "Informal",
+            "timing": "",
+            "venue": "RnD Lab",
+            "description": "Wiki Wars is a skillful and smart game of navigating through several pages of Wikipedia on a desktop without the use of a keyboard. It involves reaching the target Wikipedia page from an already given Wikipedia page in the limited time and with the least number of clicks. Players use the blue Wikipedia links to go from one page to another. The number of players for the game is 2.",
+            "contact": ["Aditi Singh - 7061767535", "Chinmay Patade - 9137213409"]
+        },
+        {
+            "event": "Talking prompt",
+            "club": "SDS",
+            "category": "Informal",
+            "timing": "Round 1 - 9 AM- 10:30 AM, Round 2 - 10:30 am to 12:30 PM",
+            "venue": "RnD Lab",
+            "description": "The event features participants writing prompts to  get information from the large language models softwares such as Chatgpt or Bard to generate unusual words in its reply by giving different prompts.",
+            "contact": ["Manoj Kumar, Debasmita Das - 81024 46794"]
+        },
+        {
+            "event": "Musical Charades",
+            "club": "SPIC MACAY",
+            "category": "Informal",
+            "timing": "",
+            "venue": "Classroom",
+            "description": "Get ready to elevate the classic game of charades to a whole new level with \"Musical Charades!\" This uproarious event adds a thrilling twist to the beloved game of gestures and clues. Here's how it works: teams of enthusiastic participants will don noise-cancelling headphones blasting energetic tunes, making communication a hilarious challenge. As you take turns acting out movie titles, book names, famous phrases, and more, your teammates will attempt to decipher your messages without the aid of spoken words. The result? A raucously entertaining evening filled with laughter, wild gesticulations, and the delightful chaos of trying to guess while grooving to the beats. Musical Charades promises unforgettable moments, teamwork, and uproarious fun. Join us for an unforgettable night of musical mayhem!",
+            "contact": ["Shiva Shantanu - 7061307557", "Kapil Lohani - 9413791823"]
+        },
+        {
+            "event": "The Journalist Hour",
+            "club": "NAPS",
+            "category": "Formal",
+            "timing": "9:00 AM - 12.30 PM",
+            "venue": "LH-1",
+            "description": "A journalism-based event with panel discussions, aiming to judge the participant's deduction of the same while upholding clarity and depth in their line of thought. It comprises two rounds: Prelims which include a case study of a socio-political topic, and Qualifying which will lead the teams to the finals - a panel discussion.",
+            "contact": ["Priyanka Sinha - 9903411800"]
+        },
+        {
+            "event": "Lost Codes",
+            "club": "ACM",
+            "category": "Formal",
+            "timing": "Round 1 - 9.30 AM - 11:00 AM, Round 2 - 11.30 AM - 2:00 PM",
+            "venue": "Classroom",
+            "description": "Unlock the Binary: Extract the Hidden Code! Put your skills to the test in a thrilling contest of code retrieval from executable files.",
+            "contact": ["Raj Aryan - 72590 27418", "Kumar Shivam - 9693576605"]
+        },
+        {
+            "event": "Cube-De-Cemento",
+            "club": "IEI Civil",
+            "category": "Flagship",
+            "timing": "Round 1 - 11.30 AM - 1.30 PM, Round 2 - 2.00 PM - 4.00 PM",
+            "venue": " Classroom & Civil Dept Lab",
+            "description": "Create a concrete block with provided ingredients and proportions. Submit procedure with ingredients, team members' names, and completion time. Damage or mess leads to disqualification. Top three strongest concrete blocks win.",
+            "contact": ["SNEHA SHRUTI - 8789532609"]
+        },
+        {
+            "event": "Chayachitra",
+            "club": "PSOC",
+            "category": "Informal",
+            "timing": "9:30 AM - 12 PM",
+            "venue": "CAT Hall",
+            "description": "This competition invites filmmakers to weave their storytelling magic around a diverse array of themes. The finest 5-10 entries will be showcased in an exclusive premiere event, and from these, the top 3 will emerge as the champions.",
+            "contact": ["Bodhisatwa Sinha - 6296220288"]
+        },
+        {
+            "event": "Air Crash Investigation",
+            "club": "Aerosoc",
+            "category": "Formal",
+            "timing": "Round 1 - 11:30 AM to 12.00 PM, Round 2 - 12:30 PM to 2 PM",
+            "venue": "Classroom",
+            "description": "The safest mode of transportation but one small mistake and it becomes the deadliest accident. \"Examine the wrecks and official records, and hear from eyewitnesses, passengers, and aviation experts as we reconstruct some of the most tragic disasters in aviation history. Air Crash Investigation examines what went wrong and how future disasters can be averted.\" Be an air crash investigator and, with your friends, solve real-life inspired air crashes just like a real one with the black box data, flight path, pilot's history, recordings and much more in your hands.",
+            "contact": ["Deewakar Prasad - 9470102532"]
+        },
+        {
+            "event": "Robo Tumble",
+            "club": "Robolution",
+            "category": "Formal",
+            "timing": "Round 1 : 11.00 AM - 1.00 PM, Round 2: 1.30 PM -3.30 PM",
+            "venue": "Shorbagh",
+            "description": "",
+            "contact": ["Navneet Kumar - 8002781431"]
+        },
+        {
+            "event": "Ink & Imagination",
+            "club": "Ehsaas",
+            "category": "Informal",
+            "timing": "1:00 PM - 3.00 PM",
+            "venue": "LH-1",
+            "description": "A platform for budding writers to explore storytelling, character development, and the art of words.",
+            "contact": ["Sudhanshu - 9534050480", "Anurag - 9653376156"]
+        },
+        {
+            "event": "Buggy Escape",
+            "club": "Team Aveon",
+            "category": "Informal",
+            "timing": "Round 1 - 11:30 am - 12:30 PM, Round 2 - 12:30PM - 2:00PM",
+            "venue": "Round 1: Classroom, Round 2: In front of Prod. Dept",
+            "description": "So, whats the hurry? Yes the time is less and you have to keep it lesser still. Aveon participates in the SAE E-Baja event every year and one of the key tests in the event involves escaping out of the ATV under 5 seconds. We intend to bring adrenaline to our campus and challenge you the same. It's not tough as it sounds, right? Then come on and get locked, let's see how fast you can unlock yourself!",
+            "contact": ["Ayush Kumar - 7992331764"]
+        },
+        {
+            "event": "CSS Battle",
+            "club": "IEEE",
+            "category": "Formal",
+            "timing": " Round 1 - 11:30 am - 12:30 PM, Round 2 - 12:30PM - 2:30PM",
+            "venue": "Classroom",
+            "description": "This event consists of 2 rounds both round will be conducted offline. The first round will be the elimination round and 12-15 teams will qualify for second round. In second round qualified teams will be shown some design on projector and they have to clone that design using CSS. Team that is closest to design wins. A team can have maximum 2 members in both rounds.",
+            "contact": ["Gajendra Aggarwal - 8853030790"]
+        },
+        {
+            "event": "Shipwreck",
+            "club": "UNESQUO",
+            "category": "Formal",
+            "timing": "12:30 PM - 3:00 PM",
+            "venue": "CAT Hall",
+            "description": "“You see yourself as a shipwreck, but we see your treasure glowing inside, beneath the oceans in your eyes.” ― Curtis Tyrone Jones\nAn indubitable fact for sure, that we all are wrecked and broken but that is how the light shines from within. It's that time of the year where we give you an opportunity to be the chosen one. So behold with bated breath and ineffable energy for a rusty, ruthless and a rummaging ride across the sea with a captain who will guide you according to his whims and fancies.\nCome one and come all as it is time to save yourselves from the perils of the sea and the only weapon you have is your intelligence and wit. Twists and turns await you! Presenting before you the most exciting ride, Shipwreck!\nThe ship might not be dark but the wreck is full of horrors. See you there!",
+            "contact": ["Harsh Ranjan - 6201628654"]
+        },
+        {
+            "event": "Razzmatazz",
+            "club": "Dance Club",
+            "category": "Formal",
+            "timing": "1:00 PM - 3:00 PM",
+            "venue": "GP Birla Auditorium",
+            "description": "“Dance is your pulse, your heartbeat, your breathing. It’s the rhythm of your life. It’s the expression in time and movement, in happiness, joy, sadness and envy.”\nDance Club brings to you Razzmatazz, the most awaited dance competition of BIT Mesra ! Get to connect with other dancers with different styles and don't miss out on the opportunity to compete with them and remember, experience is the greatest reward.",
+            "contact": ["Belal Khan - 7632810733", "Ritesh kumar - 6203167432"]
+        },
+        {
+            "event": "Mr. & Miss Pantheon",
+            "club": "Leo & Rotaract",
+            "category": "Flagship",
+            "timing": "Round 1 - Online, Round 2 - Pre Ramp, Round 3 - 3:30 PM - 6:00 PM",
+            "venue": "GP Birla Auditorium",
+            "description": " Step into the spotlight at Pantheon's grand techfest, where the Leo & Rotaract Club proudly presents \"Mr. and Miss Pantheon.\" This pageant extravaganza is a dazzling showcase of charisma, talent, and intellect, featuring rounds that put participants' personalities, talents, and wits to the test. The evening culminates in a mesmerizing Ramp Walk and a thrilling Questioning Round by our esteemed panel, all leading to the crowning of the next Mr. and Miss Pantheon. Join us for an unforgettable night of glamour and brilliance, where stars are born, and legends are crowned!",
+            "contact": ["Aniket Kumar - 9304278241"]
+        }
+    ]
 }
