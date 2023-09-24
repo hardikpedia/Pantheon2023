@@ -27,6 +27,10 @@ const data = [
         ans: "Anyone and everyone! Be it a student of BIT Mesra or your friend from school or college. It's a haven for young minds to pursue their knowledge and have fun, and all are duly welcomed. "
     },
     {
+        ques: "Any advisory for participating teams?",
+        ans: "First of all, every individual has to register themselves using email. Anyone can create a team if they are not part of any other team. Also, anyone can join a team using a team join code. One user can be part of only one team. You cannot switch teams after registering yourself on the website."
+    },
+    {
         ques: "Is there a registration fee for individual events?",
         ans: "There are no fees for taking part in any Pantheon event. Enjoy!"
     },
