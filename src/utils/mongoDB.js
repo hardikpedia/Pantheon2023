@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-
+const dotenv = require('dotenv');
 const MONGO_URL = process.env.MONGO_URL;
 
 if (!MONGO_URL) {
