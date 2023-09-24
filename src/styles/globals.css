@@ -8,6 +8,8 @@
     box-sizing: border-box;
   }
 
+body::-webkit-scrollbar { width: 0rem; }
+
 
 .card{
   height: 500px;
