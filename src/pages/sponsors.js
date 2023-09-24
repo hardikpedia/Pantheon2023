@@ -30,8 +30,8 @@ const Sponsors = ({ data }) => {
     <>
       <div className="  overflow-hidden  ">
         <div
-          style={{ backgroundImage: ` url(${`images/bg.jpg`})` }}
-          className=" w-full justify-center items-center bg-cover bg-black"
+          
+          className="  min-h-screen justify-center items-center  bg-black"
         >
           <div className="pt-8">
             <SectionContainer id="sponsors">
@@ -59,11 +59,13 @@ const Sponsors = ({ data }) => {
                 </h1>
                 </SponsorHeading>
              
-             
-             
+                
              <Sliderss />
+            
+             
+             
             </SectionContainer>
-           
+            
           </div>
         </div>
       </div>
