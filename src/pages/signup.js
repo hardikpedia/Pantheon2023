@@ -75,7 +75,7 @@ export default function Signup() {
 
     return (
         <div className="bg-primary bg-black pt-10 pb-20">
-            <div className='text-5xl font-bold flex justify-center items-center text-white mb-3'>SIGNUP</div>
+            <h1 className="font-bold text-3xl md:text-5xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">SIGNUP</h1>
             <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
                     {isLoading && <Loader />}

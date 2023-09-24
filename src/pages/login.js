@@ -76,7 +76,7 @@ export default function LoginIn() {
                     {isLoading && <Loader />}
 
                     <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
-                        <div className='text-5xl flex justify-center items-center tracking-widest text-white mb-8 font-semibold'>LOGIN</div>
+                    <h1 className="font-bold text-3xl md:text-5xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">LOGIN</h1>
 
                         <FormField
                             labelName="Email*"
