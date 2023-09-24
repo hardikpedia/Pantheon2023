@@ -5,6 +5,8 @@ import { compare } from "bcryptjs";
 export default async function signin(req, res) {
     await dbConnect();
     const { email, password } = req.body;
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(!email.match(validRegex)) return res.status(404).json({ 'message': 'Incorrect Email format' });
     let existingUser;
     try {
         existingUser = await User.findOne({ email: email });

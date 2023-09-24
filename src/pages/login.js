@@ -45,11 +45,12 @@ export default function LoginIn() {
         });
         const res = await response.json();
         setIsLoading(false);
-        console.log(response.status);
         if (!response.ok) {
             alert(res.message)
             return;
         }
+
+        console.log(res);
 
         setUser(true);
         setUserInfo({

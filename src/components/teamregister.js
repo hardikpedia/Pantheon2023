@@ -5,10 +5,11 @@ import FormField from '@/components/FormField';
 import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import Loader from './Loader';
+import { useStateContext } from '@/context';
 
 export default function TeamRegister({ id }) {
     const [isLoading, setIsLoading] = useState(false);
-
+    const { userinfo, setUserInfo } = useStateContext();
     const [form, setForm] = useState({
         teamName: ''
     });
@@ -36,7 +37,12 @@ export default function TeamRegister({ id }) {
         });
         const res = await response.json();
         setIsLoading(false);
+        if(!response.ok) {
+            alert(res.message);
+            return;
+        }
         const join_code = res['join_code'];
+        setUserInfo({ ...userinfo, teamID: join_code });
         setForm({
             teamName: ''
         });

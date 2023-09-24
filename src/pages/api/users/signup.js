@@ -7,6 +7,10 @@ export default async function signup(req, res) {
     await dbConnect();
     const { name, email, phone, college, password } = req.body;
 
+    if(!phone || phone.length != 10) return res.status(404).json({ 'message': 'Invalid Phone Number' });
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(!email.match(validRegex)) return res.status(404).json({ 'message': 'Incorrect Email format' });
+
     // check if already present
     let existingUser;
     try {

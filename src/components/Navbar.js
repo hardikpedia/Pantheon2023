@@ -84,7 +84,7 @@ const Navbar = () => {
                     Events
                   </p>
                 </div>
-                <div
+                {/* <div
                   onClick={() => {
                     router.push("/leaderboard");
                   }}
@@ -92,7 +92,7 @@ const Navbar = () => {
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Leaderboard
                   </p>
-                </div>
+                </div> */}
                 <div
                   onClick={() => {
                     router.push("/sponsors");
@@ -236,7 +236,7 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <div
+            {/* <div
               onClick={() => {
                 router.push("/leaderboard");
               }}
@@ -244,7 +244,7 @@ const Navbar = () => {
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Leaderboard
               </p>
-            </div>
+            </div> */}
             <div
               onClick={() => {
                 router.push("/sponsors");

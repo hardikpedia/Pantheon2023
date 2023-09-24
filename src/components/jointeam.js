@@ -37,7 +37,7 @@ export default function JoinTeam({ id }) {
             }
         });
         const response = await res.json();
-
+        setIsLoading(false);
         if(!res.ok){
             alert(response.message)
             return;
@@ -47,7 +47,6 @@ export default function JoinTeam({ id }) {
             ...userinfo,
             teamID: response['team']
         });
-        setIsLoading(false);
         setForm({
             teamId: '',
         });

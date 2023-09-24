@@ -51,13 +51,17 @@ export default function Signup() {
         });
         const data = await response.json();
         setIsLoading(false);
+        if(!response.ok) {
+            alert(data.message);
+            return;
+        }
         const id = data['ID'];
         setUser(true);
         setUserInfo({
             name: form.name,
             pantheonid: id,
             email: form.email,
-            team: "null"
+            teamID: "null"
         });
         setForm({
             name: '',

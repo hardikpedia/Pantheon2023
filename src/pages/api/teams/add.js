@@ -15,7 +15,7 @@ export default async function add(req, res, next) {
     }
     if(!user || !team) return res.status(404).json({ 'message': 'Not found' });
     if(team.team_members.length >= 8) return res.status(400).json({ 'message': 'Team filled' });
-    if(user.team != "null") return res.status(201).json({ 'ID': -1 });
+    if(user.team != "null") return res.status(404).json({ 'message': 'User aleady in a team' });
     user.team = join_code;
     try {
         const sess = await mongoose.startSession();
