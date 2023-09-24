@@ -57,8 +57,8 @@ const EventCard = ({ day, event, venue, timing, category, desc, club, contact })
             <br />
           </>
         }
-        {contact.map((c) => {
-          return <p className="text-gray-700 text-base"><b>{c}</b></p>
+        {contact.map((c, key) => {
+          return <p className="text-gray-700 text-base" key={key}><b>{c}</b></p>
         })}
         </div>
         <div className="flex-grow flex items-center justify-center">
