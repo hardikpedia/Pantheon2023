@@ -7,15 +7,20 @@ const EventCard = () => {
 
   const handleClick = () => {
     console.log("clicked");
+    setIsHovered(!isHovered);
   };
 
   return (
     <div
       className={`h-[450px] w-[320px]  overflow-hidden shadow-lg transition-transform transform hover:scale-105 border-white border-2 rounded-2xl ${
         isHovered ? "hover:description-visible" : ""
-      }`}
+      }` }
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      // onClick={handleClick}
+      onClick={() => {
+        setIsHovered(!isHovered);
+      }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <div>
@@ -28,7 +33,12 @@ const EventCard = () => {
         />
       </div>
 
-      <div className="px-6 py-4 bg-gray-300 rounded-lg">
+      <div
+        className="px-6 py-4 bg-gray-300 rounded-lg "
+        onClick={() => {
+          setIsHovered(!isHovered);
+        }}
+      >
         <div className="font-bold text-xl mb-2 text-gray-700">Title</div>
         <p className="text-gray-700 text-base">7th sept</p>
         <p className="text-gray-700 text-base">CAT Hall</p>
