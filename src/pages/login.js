@@ -5,7 +5,7 @@ import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import { useStateContext } from '@/context';
 import Loader from '@/components/Loader';
-
+import StarsCanvas from '@/components/Stars';
 
 export default function LoginIn() {
     const [isLoading, setIsLoading] = useState(false);
@@ -68,7 +68,7 @@ export default function LoginIn() {
     }   
 
     return (
-        <div className="bg-primary h-screen bg-black pt-20 pb-20">
+        <div className="bg-primary h-screen bg-black pt-20 pb-20 relative z-0">
             <div className='text-5xl flex justify-center items-center text-white mb-3 font-bold'>LOGIN</div>
             <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
@@ -99,7 +99,7 @@ export default function LoginIn() {
                         <div className="flex justify-center items-center mt-[30px]">
                             <CustomButton
                                 btnType="submit"
-                                title="Sign Up"
+                                title="Sign In"
                                 handleClick={onSubmitHandler}
                                 styles=""
                             />
@@ -109,6 +109,7 @@ export default function LoginIn() {
             </div>
 
             {/* <ToastContainer /> */}
+            <StarsCanvas />
         </div>
 
     );

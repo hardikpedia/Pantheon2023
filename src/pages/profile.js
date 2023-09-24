@@ -6,7 +6,7 @@ import TeamRegisterModel from '@/components/registerTeamPopup';
 import { useStateContext } from '@/context';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import StarsCanvas from '@/components/Stars';
 const Register = () => {
     const { user, userinfo, setUser, setUserInfo } = useStateContext();
     const [joinTeamModel, setJoinTeamModel] = useState(false)
@@ -26,7 +26,7 @@ const Register = () => {
     }
     if(user) {
         return (
-            <div className='bg-black flex md:flex-row flex-col h-screen justify-evenly items-center pb-20' >
+            <div className='bg-black flex md:flex-row flex-col h-screen justify-evenly items-center pb-20 relative z-0' >
                 <Image className='' src = '/Pantheon_Emblem_White.png' alt='pantheon logo' height={200} width={200} />
                 <div className='flex flex-col justify-center items-center mt-15'>
                     <div id='join' onClick={handleClick} className='flex-1 font-poppins font-semibold text-[40px] lg:text-[52px] text-white  leading-[50px] lg:leading-[75px]' > Hello {userinfo.name} </div>
@@ -38,6 +38,7 @@ const Register = () => {
                 </div>
                 <JoinModel onClose={handleOnClose} visible={joinTeamModel} id={userinfo.pantheonid} />
                 <TeamRegisterModel onClose={handleOnClose} visible={createTeamModel} id={userinfo.pantheonid} />
+                <StarsCanvas />
             </div>
         )
     }else{
