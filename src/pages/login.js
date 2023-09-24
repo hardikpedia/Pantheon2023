@@ -45,7 +45,8 @@ export default function LoginIn() {
         });
         const res = await response.json();
         setIsLoading(false);
-        if(!res.ok){
+        console.log(response.status);
+        if (!response.ok) {
             alert(res.message)
             return;
         }
@@ -54,7 +55,8 @@ export default function LoginIn() {
         setUserInfo({
             name: res['name'],
             pantheonid: res['ID'],
-            email: form.email
+            email: form.email,
+            teamID: res['code']
         });
         setForm({
             email: '',
@@ -65,16 +67,16 @@ export default function LoginIn() {
 
     const handleClik = () => {
         router.push('/signup');
-    }   
+    }
 
     return (
         <div className="bg-primary h-screen bg-black pt-20 pb-20 relative z-0">
-            <div className='text-5xl flex justify-center items-center text-white mb-3 font-bold'>LOGIN</div>
-            <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
+            <div className='mx-auto bg-primary bg-pink-200  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-[0.09] rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
                     {isLoading && <Loader />}
 
                     <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
+                        <div className='text-5xl flex justify-center items-center tracking-widest text-white mb-8 font-semibold'>LOGIN</div>
 
                         <FormField
                             labelName="Email*"
@@ -84,7 +86,7 @@ export default function LoginIn() {
                             handleChange={(e) => handleFormFieldChange('email', e)}
                         />
 
-                        <div className='  '>
+                        <div className=' '>
                             <FormField
                                 labelName="Password*"
                                 placeholder="Enter new password"
@@ -92,10 +94,10 @@ export default function LoginIn() {
                                 value={form.password}
                                 handleChange={(e) => handleFormFieldChange('password', e)}
                             />
-                            {pass !== "password" ? <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEye /></div> : <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEyeInvisible /></div>}
+                            {pass !== "password" ? <div className='absolute -mt-8 right-[16%] sm:right-[18%] lg:right-[20%] text-white scale-[1.4]' onClick={handlePass}><AiFillEye /></div> : <div className='absolute -mt-8 right-[16%] sm:right-[18%] lg:right-[20%] text-white scale-[1.4]' onClick={handlePass}><AiFillEyeInvisible /></div>}
                         </div>
 
-                        <div className='font-poppins font-normal text-white/50 text-[18px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Don&#39;t have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > Signup? </span>  </div>
+                        <div className='font-poppins font-normal text-white/50 text-[15px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Don&#39;t have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > Signup? </span>  </div>
                         <div className="flex justify-center items-center mt-[30px]">
                             <CustomButton
                                 btnType="submit"
