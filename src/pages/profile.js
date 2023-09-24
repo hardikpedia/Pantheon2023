@@ -25,11 +25,11 @@ const Register = () => {
         }
     }
     useEffect(()=>{
-        if(userinfo.teamID != "null"){
+        if(userinfo.team != "null"){
             setJoinTeamModel(false)
             setCreateTeamModel(false)
         }
-    }, [userinfo.teamID])
+    }, [userinfo.team])
     
     if(user) {
         return (
@@ -41,7 +41,7 @@ const Register = () => {
                     <div className='font-poppins font-normal text-white/50 text-[18px] leading-[25px] flex md:text-start text-center md:leading-[30.8px] mb-7' > {userinfo.pantheonid} </div>
                     
                     {
-                        userinfo.teamID == "null" ? (
+                        userinfo.team == "null" ? (
                             <div>
                                 <div id='join' onClick={handleClick} className='m-2 cursor-pointer font-epilogue text-[16px] leading-[26px] min-h-[52px] bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transform transition-all duration-200 ease-in-out text-white font-bold py-3 px-6 rounded-md' > Join a team </div>
                                 <div id='create' onClick={handleClick} className='m-2 cursor-pointer font-epilogue text-[16px] leading-[26px] min-h-[52px] bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transform transition-all duration-200 ease-in-out text-white font-bold py-3 px-6 rounded-md'  > Create a team </div>
