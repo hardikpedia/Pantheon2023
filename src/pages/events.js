@@ -1,11 +1,8 @@
 import EventCard from "@/components/EventCard";
 import Image from "next/image";
-<<<<<<< HEAD
 import data from "@/utils/bible.json";
 
-=======
 import StarsCanvas from "@/components/Stars";
->>>>>>> b45dea24a30d57f51126a90a4ccced63ca1cdc33
 const Events = () => {
   console.log(data["day1"]);
   return (
@@ -14,14 +11,14 @@ const Events = () => {
         EVENTS
       </div>
       <div className="flex flex-wrap gap-[100px] items-center justify-center" >
-        {data["day1"].map((event) => {
-            return <EventCard day={"6 Oct"} event={event["event"]} venue={event["venue"]} timing={event["timing"]} category={event["category"]} desc={event["description"]} club={event["club"]} contact={event["contact"]} />
+        {data["day1"].map((event, ind) => {
+            return <EventCard key={ind} day={"6 Oct"} event={event["event"]} venue={event["venue"]} timing={event["timing"]} category={event["category"]} desc={event["description"]} club={event["club"]} contact={event["contact"]} />
         })}
-        {data["day2"].map((event) => {
-            return <EventCard day={"7 Oct"} event={event["event"]} venue={event["venue"]} timing={event["timing"]} category={event["category"]} desc={event["description"]} club={event["club"]} contact={event["contact"]} />
+        {data["day2"].map((event, ind) => {
+            return <EventCard key={ind} day={"7 Oct"} event={event["event"]} venue={event["venue"]} timing={event["timing"]} category={event["category"]} desc={event["description"]} club={event["club"]} contact={event["contact"]} />
         })}
-        {data["day3"].map((event) => {
-            return <EventCard day={"8 Oct"} event={event["event"]} venue={event["venue"]} timing={event["timing"]} category={event["category"]} desc={event["description"]} club={event["club"]} contact={event["contact"]} />
+        {data["day3"].map((event, ind) => {
+            return <EventCard key={ind} day={"8 Oct"} event={event["event"]} venue={event["venue"]} timing={event["timing"]} category={event["category"]} desc={event["description"]} club={event["club"]} contact={event["contact"]} />
         })}
       </div>
       <StarsCanvas />
