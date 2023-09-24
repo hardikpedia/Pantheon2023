@@ -45,7 +45,8 @@ export default function LoginIn() {
         });
         const res = await response.json();
         setIsLoading(false);
-        if (!res.ok) {
+        console.log(response.status);
+        if (!response.ok) {
             alert(res.message)
             return;
         }
@@ -54,7 +55,8 @@ export default function LoginIn() {
         setUserInfo({
             name: res['name'],
             pantheonid: res['ID'],
-            email: form.email
+            email: form.email,
+            teamID: res['code']
         });
         setForm({
             email: '',
@@ -84,7 +86,7 @@ export default function LoginIn() {
                             handleChange={(e) => handleFormFieldChange('email', e)}
                         />
 
-                        <div className='  '>
+                        <div className=' '>
                             <FormField
                                 labelName="Password*"
                                 placeholder="Enter new password"

@@ -24,8 +24,9 @@ export default async function add(req, res, next) {
         await team.save({ session: sess });
         await user.save({ session: sess });
         await sess.commitTransaction();
+        
     } catch (err) {
         return res.status(500).json({ 'message': 'Internal Server Error' });
     }
-    return res.status(201).json({ 'message': "Successfully Joined" });
+    return res.status(201).json({ "team": join_code });
 }

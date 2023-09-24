@@ -5,8 +5,11 @@ import FormField from '@/components/FormField';
 import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import Loader from './Loader';
+import { useStateContext } from '@/context';
 
 export default function JoinTeam({ id }) {
+    const { user, userinfo, setUser, setUserInfo } = useStateContext();
+
     const [isLoading, setIsLoading] = useState(false);
     const [form, setForm] = useState({
         teamId: '',
@@ -34,11 +37,21 @@ export default function JoinTeam({ id }) {
             }
         });
         const response = await res.json();
+
+        if(!res.ok){
+            alert(response.message)
+            return;
+        }
+
+        setUserInfo({
+            ...userinfo,
+            teamID: response['team']
+        });
         setIsLoading(false);
         setForm({
             teamId: '',
         });
-
+        
     };
 
 

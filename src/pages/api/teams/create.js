@@ -38,7 +38,7 @@ export default async function create(req, res) {
         console.log(created);
         const team = await Team.create(created);
         await user.save();
-        res.status(201).json(team)
+        // res.status(201).json(team)
         
     } catch(err) {
         return res.status(500).json(err);
