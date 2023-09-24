@@ -2,9 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import Carousel from '@/components/Carousel/Carousel'
 import CarouselCard from '@/components/Carousel/CarouselCard'
+import StarsCanvas from '@/components/Stars'
+
 const About = () => {
   return (
-    <div className=' bg-black p-10' >
+    <div className=' bg-black p-10 relative z-0' >
         <h1 className="font-bold text-3xl md:text-5xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">ABOUT</h1>
         <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
             <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
@@ -35,7 +37,7 @@ const About = () => {
                 <CarouselCard path='/about/12.jpg' />
             </Carousel>
         </div>
-
+        <StarsCanvas />
     </div>
   )
 }
