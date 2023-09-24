@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 import CustomButton from "./CustomButton";
@@ -8,15 +9,20 @@ const EventCard = ({ day, event, venue, timing, category, desc, club, contact })
 
   const handleClick = () => {
     console.log("clicked");
+    setIsHovered(!isHovered);
   };
 
   return (
     <div
       className={`h-[450px] w-[320px] overflow-hidden shadow-lg transition-transform transform hover:scale-105 border-white border-2 rounded-2xl ${
         isHovered ? "hover:description-visible" : ""
-      }`}
+      }` }
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      // onClick={handleClick}
+      onClick={() => {
+        setIsHovered(!isHovered);
+      }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <div>

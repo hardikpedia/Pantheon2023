@@ -1,94 +1,138 @@
 import { useState } from "react";
-import Link from "next/link";
+// import div from "next/div";
 import Image from "next/image";
 import { useStateContext } from "@/context";
-
+import { useRouter } from "next/router";
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const { user, userinfo, setUser, setUserInfo } = useStateContext();
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-
+  const router = useRouter();
   const handleLogout = () => {
     setUser(false);
     setUserInfo({});
   };
 
   return (
-    <nav className="bg-black">
+    <nav className="sticky bg-black hover:cursor-pointer hover:transition-all transition-duration:100 transition:ease-out z-50 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link href="/">
+            <div
+              onClick={() => {
+                router.push("/");
+              }}
+            >
               <Image
                 src="/Pantheon_Emblem_White.png"
                 alt="pantheon"
                 width={40}
                 height={40}
               />
-            </Link>
+            </div>
           </div>
           <div className="flex items-center">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/">
-                  <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <div
+                  onClick={() => {
+                    router.push("/");
+                  }}
+                >
+                  <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ">
                     Home
                   </p>
-                </Link>
-                <Link href="/about">
+                </div>
+                <div
+                  onClick={() => {
+                    router.push("/about");
+                  }}
+                >
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     About
                   </p>
-                </Link>
+                </div>
                 {user ? (
-                  <Link href="/profile">
+                  <div
+                    onClick={() => {
+                      router.push("/profile");
+                    }}
+                  >
                     <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                       Profile
                     </p>
-                  </Link>
+                  </div>
                 ) : (
-                  <Link href="/login">
+                  <div
+                    onClick={() => {
+                      router.push("/login");
+                    }}
+                  >
                     <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                       Login
                     </p>
-                  </Link>
+                  </div>
                 )}
-                <Link href="/events">
+                <div
+                  onClick={() => {
+                    router.push("/events");
+                  }}
+                >
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Events
                   </p>
-                </Link>
-                <Link href="/leaderboard">
+                </div>
+                <div
+                  onClick={() => {
+                    router.push("/leaderboard");
+                  }}
+                >
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Leaderboard
                   </p>
-                </Link>
-                <Link href="/sponsors">
+                </div>
+                <div
+                  onClick={() => {
+                    router.push("/sponsors");
+                  }}
+                >
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Sponsors
                   </p>
-                </Link>
-                <Link href="/faq">
+                </div>
+                <div
+                  onClick={() => {
+                    router.push("/faq");
+                  }}
+                >
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     FAQs
                   </p>
-                </Link>
-                <Link href="/contact">
+                </div>
+                <div
+                  onClick={() => {
+                    router.push("/contact");
+                  }}
+                >
                   <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Contact
                   </p>
-                </Link>
+                </div>
                 {user && (
-                  <Link href="/">
+                  <div
+                    onClick={() => {
+                      router.push("/");
+                    }}
+                  >
                     <p
                       onClick={handleLogout}
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Logout
                     </p>
-                  </Link>
+                  </div>
                 )}
               </div>
             </div>
@@ -142,65 +186,105 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-3 sm:px-3 flex justify-evenly transition ease-in-out delay-150">
           <div>
-            <Link href="/">
+            <div
+              onClick={() => {
+                router.push("/");
+              }}
+            >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Home
               </p>
-            </Link>
-            <Link href="/about">
+            </div>
+            <div
+              onClick={() => {
+                router.push("/about");
+              }}
+            >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 About
               </p>
-            </Link>
+            </div>
             {user ? (
-              <Link href="/profile">
+              <div
+                onClick={() => {
+                  router.push("/profile");
+                }}
+              >
                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Profile
                 </p>
-              </Link>
+              </div>
             ) : (
-              <Link href="/login">
+              <div
+                onClick={() => {
+                  router.push("/login");
+                }}
+              >
                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Login
                 </p>
-              </Link>
+              </div>
             )}
-            <Link href="/events">
+            <div
+              onClick={() => {
+                router.push("/events");
+              }}
+            >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Events
               </p>
-            </Link>
+            </div>
           </div>
           <div>
-            <Link href="/leaderboard">
+            <div
+              onClick={() => {
+                router.push("/leaderboard");
+              }}
+            >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Leaderboard
               </p>
-            </Link>
-            <Link href="/sponsors">
+            </div>
+            <div
+              onClick={() => {
+                router.push("/sponsors");
+              }}
+            >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Sponsors
               </p>
-            </Link>
-            <Link href="/faq">
+            </div>
+            <div
+              onClick={() => {
+                router.push("/faq");
+              }}
+            >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 FAQs
               </p>
-            </Link>
-            <Link href="/contact">
+            </div>
+            <div
+              onClick={() => {
+                router.push("/contact");
+              }}
+            >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Contact
               </p>
-            </Link>
+            </div>
             {user && (
-              <Link href="/">
+              <div
+                onClick={() => {
+                  router.push("/");
+                }}
+              >
                 <p
                   onClick={handleLogout}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Logout
                 </p>
-              </Link>
+              </div>
             )}
           </div>
         </div>
