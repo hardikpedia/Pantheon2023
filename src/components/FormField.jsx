@@ -1,6 +1,6 @@
 // import React from 'react'
 
-const FormField = ({ labelName, placeholder, inputType, isTextArea, value, handleChange }) => {
+const FormField = ({ labelName, placeholder, inputType, isTextArea, value, handleChange, name }) => {
     return (
         <label className="flex-1 w-full flex flex-col">
             {labelName && (
@@ -8,6 +8,7 @@ const FormField = ({ labelName, placeholder, inputType, isTextArea, value, handl
             )}
             {isTextArea ? (
                 <textarea
+                    name={name}
                     required
                     value={value}
                     onChange={handleChange}
@@ -17,6 +18,7 @@ const FormField = ({ labelName, placeholder, inputType, isTextArea, value, handl
                 />
             ) : (
                 <input
+                    name={name}
                     required
                     value={value}
                     onChange={handleChange}
