@@ -69,18 +69,18 @@ export default function Signup() {
         router.push('/profile');
     };
 
-    const handleClik = () => { 
+    const handleClik = () => {
         router.push('/login');
     }
 
     return (
         <div className="bg-primary bg-black pt-10 pb-20">
-            <div className='text-5xl font-bold flex justify-center items-center text-white mb-3'>SIGNUP</div>
-            <div className='mx-auto bg-primary bg-[#01040f]  rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]  '>
+            <div className='mx-auto bg-primary bg-pink-200  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-[0.09] rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]   '>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
                     {isLoading && <Loader />}
 
                     <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
+                        <div className='text-5xl flex justify-center items-center tracking-widest text-white mb-8 font-semibold'>SIGN UP</div>
 
 
                         <FormField
@@ -125,7 +125,7 @@ export default function Signup() {
                             {pass !== "password" ? <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEye /></div> : <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEyeInvisible /></div>}
                         </div>
 
-                        <div className='font-poppins font-normal text-white/50 text-[18px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Already have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > login? </span>  </div>
+                        <div className='font-poppins font-normal text-white/50 text-[15px] md:text-[16px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Already have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > login? </span>  </div>
 
                         <div className="flex justify-center items-center mt-[30px]">
                             <CustomButton
