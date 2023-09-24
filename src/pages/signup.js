@@ -122,7 +122,7 @@ export default function Signup() {
                                 value={form.password}
                                 handleChange={(e) => handleFormFieldChange('password', e)}
                             />
-                            {pass !== "password" ? <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEye /></div> : <div className='absolute -mt-8 right-[16%] sm:right-[18%] md:right-[28%] lg:right-[32%] text-white scale-[1.4]' onClick={handlePass}><AiFillEyeInvisible /></div>}
+                            {pass !== "password" ? <div className='absolute -mt-8 right-[16%] sm:right-[18%] lg:right-[20%] text-white scale-[1.4]' onClick={handlePass}><AiFillEye /></div> : <div className='absolute -mt-8 right-[16%] sm:right-[18%] lg:right-[20%] text-white scale-[1.4]' onClick={handlePass}><AiFillEyeInvisible /></div>}
                         </div>
 
                         <div className='font-poppins font-normal text-white/50 text-[15px] md:text-[16px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Already have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > login? </span>  </div>
