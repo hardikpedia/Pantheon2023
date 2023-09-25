@@ -78,6 +78,15 @@ export default function LoginIn() {
                 </div>
             </div>
 
+            <div className='mx-auto mt-4 text-center bg-primary bg-pink-200  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-[0.09] rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]'>
+                <div className='p-4 text-gray-400 font-semibold'> For any queries related to team/user registration contact: </div>
+                <div className='pb-4 text-start flex flex-col justify-start items-center text-white/50'>
+                    <div>Prateek Krishna : 8210371121</div>
+                    <div>Kumar Shivam : 9693576605</div>
+                    <div>Raj Aryan : 7259027418</div>
+                </div>
+            </div>
+
             {/* <ToastContainer /> */}
             <StarsCanvas />
         </div>

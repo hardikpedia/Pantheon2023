@@ -8,7 +8,7 @@ export default function FaqCard(props) {
 
 
     return (
-        <div class="p-8 bg-gray-100 rounded-lg dark:bg-gray-800">
+        <div class="p-8 bg-gray-100 rounded-lg dark:bg-gray-800 opacity-80">
             <button onClick={onClickHandler} class="flex items-center justify-between w-full">
                 <h1 class="font-semibold text-gray-700 dark:text-white">{props.question}?</h1>
                 {isOpen ?

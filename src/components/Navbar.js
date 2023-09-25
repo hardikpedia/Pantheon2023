@@ -188,7 +188,9 @@ const Navbar = () => {
           <div>
             <div
               onClick={() => {
-                router.push("/");
+                router.push("/").then(() => {
+                  toggleMenu();
+                });
               }}
             >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -197,7 +199,9 @@ const Navbar = () => {
             </div>
             <div
               onClick={() => {
-                router.push("/about");
+                router.push("/about").then(() => {
+                  toggleMenu();
+                });
               }}
             >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -207,7 +211,9 @@ const Navbar = () => {
             {user ? (
               <div
                 onClick={() => {
-                  router.push("/profile");
+                  router.push("/profile").then(() => {
+                    toggleMenu();
+                  });
                 }}
               >
                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -217,7 +223,9 @@ const Navbar = () => {
             ) : (
               <div
                 onClick={() => {
-                  router.push("/login");
+                  router.push("/login").then(() => {
+                    toggleMenu();
+                  });
                 }}
               >
                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -227,7 +235,9 @@ const Navbar = () => {
             )}
             <div
               onClick={() => {
-                router.push("/events");
+                router.push("/events").then(() => {
+                  toggleMenu();
+                });
               }}
             >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -247,7 +257,9 @@ const Navbar = () => {
             </div> */}
             <div
               onClick={() => {
-                router.push("/sponsors");
+                router.push("/sponsors").then(() => {
+                  toggleMenu();
+                });
               }}
             >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -256,7 +268,9 @@ const Navbar = () => {
             </div>
             <div
               onClick={() => {
-                router.push("/faq");
+                router.push("/faq").then(() => {
+                  toggleMenu();
+                });
               }}
             >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -265,7 +279,9 @@ const Navbar = () => {
             </div>
             <div
               onClick={() => {
-                router.push("/contact");
+                router.push("/contact").then(() => {
+                  toggleMenu();
+                });
               }}
             >
               <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -275,7 +291,9 @@ const Navbar = () => {
             {user && (
               <div
                 onClick={() => {
-                  router.push("/");
+                  router.push("/").then(() => {
+                    toggleMenu();
+                  });
                 }}
               >
                 <p

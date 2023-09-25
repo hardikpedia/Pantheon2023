@@ -14,7 +14,7 @@ const EventCard = ({ day, event, venue, timing, category, desc, club, contact })
 
   return (
     <div
-      className={`h-[450px] w-[320px] overflow-hidden shadow-lg transition-transform transform hover:scale-105 border-white border-2 rounded-2xl ${
+      className={`h-[450px] w-[320px] overflow-hidden shadow-lg transition-transform transform hover:scale-105 border-white border-[1px] rounded-2xl ${
         isHovered ? "hover:description-visible" : ""
       }` }
       onMouseEnter={() => setIsHovered(true)}

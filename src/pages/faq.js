@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import FaqCard from '@/components/faqcard';
-
+import { useState } from "react";
+import FaqCard from "@/components/faqcard";
+import StarsCanvas from "@/components/Stars";
 const data = [
     {
         ques: "What is Pantheon?",
@@ -62,33 +62,24 @@ const data = [
 
 
 export default function Faq() {
+  return (
+    <div className=" bg-black relative z-0">
+      <section >
+        <div className="container px-6 py-12 mx-auto">
+          <h1 className="font-bold text-3xl md:text-5xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">
+            Frequently Asked Questions
+          </h1>
 
-
-
-    return (
-        <div className=' bg-black'>
-            <div >
-
-                <section className="bg-black">
-                    <div className="container px-6 py-12 mx-auto">
-                    <h1 className="font-bold text-3xl md:text-5xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">Frequently Asked Questions</h1>
-
-                        <div className="mt-8 space-y-8 lg:mt-12">
-                            {
-                                data.map((item, index) => {
-                                    return (
-                                        <FaqCard question={item.ques} answer={item.ans} key={index} />
-                                    )
-                                })
-                            }
-
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-
+          <div className="mt-8 space-y-8 lg:mt-12">
+            {data.map((item, index) => {
+              return (
+                <FaqCard question={item.ques} answer={item.ans} key={index} />
+              );
+            })}
+          </div>
         </div>
-
-    );
+      </section>
+      <StarsCanvas />
+    </div>
+  );
 }
