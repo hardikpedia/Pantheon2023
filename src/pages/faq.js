@@ -28,7 +28,7 @@ const data = [
     },
     {
         ques: "Any advisory for participating teams?",
-        ans: "First of all, every individual has to register themselves using email. Anyone can create a team if they are not part of any other team. Also, anyone can join a team using a team join code. One user can be part of only one team. You cannot switch teams after registering yourself on the website."
+        ans: "Initially, each individual is required to complete the registration process by providing their email address. Individuals who are not already part of a team have the privilege of creating a new team. Furthermore, anyone has the option to become a member of a team by using a team join code. It is important to note that a single user can be part of only one team, switching teams after joining a team is not permitted. Lastly, teams may consist of a maximum of 8 members."
     },
     {
         ques: "Is there a registration fee for individual events?",
