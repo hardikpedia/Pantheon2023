@@ -1,10 +1,6 @@
 import React from "react";
-// import Header from "../components/Header";
-// import iibg from "../assets/bg/bg.jpg";
-// import iiibg from "../assets/bg/bg.jpg";
-
 import Sliderss from "../components/Slider";
-import SponsorBox from "../pages/Sponsors/Sponsor";
+import SponsorBox from "../components/Sponsors/Sponsor";
 
 
 import {learnSponosor1,
