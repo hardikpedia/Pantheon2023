@@ -4,7 +4,7 @@ import styles from "../styles/styles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import Image from "next/image";
 
 
 
@@ -31,44 +31,63 @@ const Sliderss = () => {
         
         <Slider {...settings}>
         <div className="container">
-          <img
+          <Image
+          objectFit="contain"
+          width={70}
+          height={70}
             src="https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png"
             alt=""
-            className="bg-white"
-            style={{maxWidth:"50%", objectFit:"contain"}}
+            className="  object-contain"
+           // style={{maxWidth:"50%", objectFit:"contain"}}
           />
           </div>
 
 
 
           <div className="container">
-          <img
+          <Image
+           objectFit="contain"
+          width={70}
+          height={70}
             src="https://www.vectorlogo.zone/logos/apple/apple-ar21.png"
-            style={{width:"50%", objectFit:"contain"}}
+            className="  object-contain"
+           // style={{width:"50%", objectFit:"contain"}}
             alt=""
           />
           </div>
 
           <div className="container">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png"
-            style={{width:"50%", objectFit:"contain"}}
+          <Image
+         objectFit="contain"
+          width={70}
+          height={70}
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png"
+            //style={{width:"50%", objectFit:"contain"}}
+            className="  object-contain"
             alt=""
           />
           </div>
 
           <div className="container">
-          <img
+          <Image
+         objectFit="contain"
+          width={70}
+          height={70}
             src="https://logos-world.net/wp-content/uploads/2020/08/Dell-Logo-1989-2016.png"
-            style={{width:"50%", objectFit:"contain"}}
-            alt=""
+           // style={{width:"50%", objectFit:"contain"}}
+           className="  object-contain" 
+           alt=""
           />
           </div>
           <div className="container">
-          <img
+          <Image
+         objectFit="contain"
+          width={70}
+          height={70}
             src="https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png"
             alt=""
-            style={{width:"50%", objectFit:"contain"}}
+            className="  object-contain"
+            //style={{width:"50%", objectFit:"contain"}}
           />
           </div>
         </Slider>

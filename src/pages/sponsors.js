@@ -5,7 +5,7 @@ import React from "react";
 
 import Sliderss from "../components/Slider";
 import SponsorBox from "../pages/Sponsors/Sponsor";
-import styled from "styled-components";
+
 
 import {learnSponosor1,
    } from "../utils/Sponsors23";
@@ -20,22 +20,25 @@ const Sponsors = ({ data }) => {
           className="  min-h-screen justify-center items-center  bg-black"
         >
           <div className="pt-8">
-            <SectionContainer id="sponsors">
-              <Heading className="text-white">Our Sponsors</Heading>
-              <SponsorHeading>Title Sponsor</SponsorHeading>
+            <div id="sponsors" className=" pt-[50px] pb-[100px] px-0 
+            new:text-left new:px-0 new:py-[50px] new:border-b-[0.2px] new:border-b-[rgba(255,255,255,0.5)] new:border-solid 
+            text-center font-black
+            ">
+              <h1 className="text-white  block bg-[linear-gradient(_to_right,#ffc100,#ffc100,#ffc100,#ffbf00,#ffbf00_)] bg-clip-text text-[56px] text-center font-black pb-[50px] font-custom">Our Sponsors</h1>
+              <h2 className="bg-clip-text text-[white] text-2xl text-center">Title Sponsor</h2>
              
              
               <h1 className="p-4"> 
 
 </h1>
             
-              <EventsContainer>
+              <div className="flex justify-center flex-wrap rounded-[20px]">
                 {learnSponosor1.map((sponsor,index) => {
                   return <SponsorBox data={sponsor} key={index} />;
                 })}
-              </EventsContainer>
+              </div>
               
-              <SponsorHeading>
+              <h2 className="bg-clip-text text-[white] text-2xl text-center">
                 <h1 className="p-4"> 
 
                 </h1>
@@ -43,14 +46,14 @@ const Sponsors = ({ data }) => {
                 <h1 className="p-4"> 
 
                 </h1>
-                </SponsorHeading>
+                </h2>
              
                 
              <Sliderss />
             
              
              
-            </SectionContainer>
+            </div>
             
           </div>
         </div>
@@ -61,73 +64,8 @@ const Sponsors = ({ data }) => {
 
 export default Sponsors;
 
-const SectionContainer = styled.div`
-  padding: 50px 0px 100px 0px;
-  @media screen and (max-width: 800px) {
-    padding: 50px 0px 50px 0px;
-    text-align: left;
-    border-bottom: 0.2px solid rgba(255, 255, 255, 0.5);
-  }
-  text-align: center;
-  font-weight: 900;
-`;
 
-const Heading = styled.h1`
-  display: block;
-  background-image: linear-gradient(
-    to right,
-    #ffc100,
-    #ffc100,
-    #ffc100,
-    #ffbf00,
-    #ffbf00
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  
-  font-size: 56px;
-  padding-bottom: 50px;
-  text-align: center;
-  font-family: Orbitron;
-  font-weight: 900;
-`;
 
-const SponsorHeading = styled.h1`
-  display: block;
-  background-image: linear-gradient(
-    to right,
-    #ffc107,
-    #ffc107,
-    #ffc107,
-    #ffc107,
-    #ffc107
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  
-  color: white;
-  font-size: 24px;
-  text-align: center;
-`;
-//background-image: linear-gradient(to right, #f76c6c, #e8637c, #d45f8a, #bc5e93, #a25e97);
 
-const EventsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-radius: 20px;
-  padding: ${(props) => {
-    if (props.back) {
-      return "20px";
-    } else {
-      return "20px 0px 30px 0px";
-    }
-  }};
-  background-color: ${(props) => {
-    if (props.back) {
-      return "#151629";
-    } else {
-      return "rgba(0,0,0,0)";
-    }
-  }};
-`;
+
+
