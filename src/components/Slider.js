@@ -35,7 +35,7 @@ const Sliderss = () => {
           objectFit="contain"
           width={70}
           height={70}
-            src="https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png"
+            src="/recruitmentvideo.png"
             alt=""
             className="  object-contain"
            // style={{maxWidth:"50%", objectFit:"contain"}}
@@ -49,7 +49,7 @@ const Sliderss = () => {
            objectFit="contain"
           width={70}
           height={70}
-            src="https://www.vectorlogo.zone/logos/apple/apple-ar21.png"
+            src="/recruitmentvideo.png"
             className="  object-contain"
            // style={{width:"50%", objectFit:"contain"}}
             alt=""
@@ -61,7 +61,7 @@ const Sliderss = () => {
          objectFit="contain"
           width={70}
           height={70}
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png"
+          src="/recruitmentvideo.png"
             //style={{width:"50%", objectFit:"contain"}}
             className="  object-contain"
             alt=""
@@ -73,7 +73,7 @@ const Sliderss = () => {
          objectFit="contain"
           width={70}
           height={70}
-            src="https://logos-world.net/wp-content/uploads/2020/08/Dell-Logo-1989-2016.png"
+            src="/recruitmentvideo.png"
            // style={{width:"50%", objectFit:"contain"}}
            className="  object-contain" 
            alt=""
@@ -84,7 +84,7 @@ const Sliderss = () => {
          objectFit="contain"
           width={70}
           height={70}
-            src="https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png"
+            src="/recruitmentvideo.png"
             alt=""
             className="  object-contain"
             //style={{width:"50%", objectFit:"contain"}}

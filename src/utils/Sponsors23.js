@@ -3,43 +3,43 @@ export const learnSponosor1=[
     {
         Name: "Danik Bhaskar",
         Link: '',
-        image: "/pics.jpeg",
+        image: "/recruitmentvideo.png",
         type: "Title Partner"
     },
     {
         Name: "Sanako",
         Link: '',
-        image: "/pics.jpeg",
+        image: "/recruitmentvideo.png",
         type: " Title Partner"
     },
     {
         Name: "Henry Harvin",
         Link: '',
-        image: "/pics.jpeg",
+        image: "/recruitmentvideo.png",
         type: "Education Sponsor"
     },
     {
         Name: "Geeks of Geeks",
         Link: '',
-        image: "/pics.jpeg",
+        image: "/recruitmentvideo.png",
         type: "Title Partner"
     },
     {
         Name: "Interview Buddy",
         Link: '',
-        image: "/pics.jpeg",
+        image: "/recruitmentvideo.png",
         type: "Title Partner "
     },
     {
         Name: "Codingal",
         Link: '',
-        image: "/pics.jpeg",
+        image: "/recruitmentvideo.png",
         type: "Title Partner "
     },
     {
         Name: "startuped",
         Link: '',
-        image: "/pics.jpeg",
+        image: "/recruitmentvideo.png",
         type: " Title Partner"
     },
     {
@@ -62,7 +62,7 @@ export const learnSponosor1=[
 
 // import MFL_Educlub from './assets/recruitmentvideo.png'
 // import LearningWhileTravelling from './assets/recruitmentvideo.png'
-// import GrowthSchool from './assets/pics.jpeg'
+// import GrowthSchool from './assets/recruitmentvideo.png'
 
 // import BlueHillPublication from './assets/recruitmentvideo.png'
 
