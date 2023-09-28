@@ -10,7 +10,6 @@ export default function Home() {
   const router = useRouter();
 
   const buyMerch = () =>{
-    router.push('')
     router.push('https://docs.google.com/forms/d/e/1FAIpQLSdZ6E1MX3vwMEg9KzYLgeBAD_Vgj9bVpN54RFwcEqPmnBru7g/viewform')
   }
 
