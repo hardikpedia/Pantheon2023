@@ -2,10 +2,18 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Landing from "../components/Landing";
 import Animation from "../components/Animation";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+
+  const buyMerch = () =>{
+    router.push('')
+    router.push('https://docs.google.com/forms/d/e/1FAIpQLSdZ6E1MX3vwMEg9KzYLgeBAD_Vgj9bVpN54RFwcEqPmnBru7g/viewform')
+  }
+
   return (
     <div className="fixed  w-screen">
       <div className="">
@@ -28,7 +36,7 @@ export default function Home() {
           <h1 className="font-bold text-4xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-10 animate-bounce  ...">
             Merch Available
           </h1>
-          <div className="cursor-pointer flex text-2xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ">
+          <div onClick={buyMerch} className="cursor-pointer flex text-2xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ">
             <span className=' cursor-pointer text-blue-500 px-2' >click here </span>  to buy now
           </div>
           </div>
