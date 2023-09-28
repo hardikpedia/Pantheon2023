@@ -17,6 +17,7 @@ const Events = () => {
           EVENTS
         </h1>
         <div className="flex flex-wrap gap-[100px] items-center justify-center pt-12 z-10">
+          <h1 className="w-full flex justify-center m-auto text-white text-3xl font-bold">DAY 1</h1>
           {data["day1"].map((event, ind) => (
             <EventCard
               path = {event["path"]}
@@ -31,6 +32,7 @@ const Events = () => {
               contact={event["contact"]}
             />
           ))}
+          <h1 className="w-full flex justify-center m-auto text-white text-3xl font-bold">DAY 2</h1>
           {data["day2"].map((event, ind) => (
             <EventCard
               path={event["path"]}
@@ -45,6 +47,7 @@ const Events = () => {
               contact={event["contact"]}
             />
           ))}
+          <h1 className="w-full flex justify-center m-auto text-white text-3xl font-bold">DAY 3</h1>
           {data["day3"].map((event, ind) => (
             <EventCard
             path={event["path"]}

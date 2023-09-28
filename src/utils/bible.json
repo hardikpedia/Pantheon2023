@@ -29,6 +29,7 @@
             "contact": ["AMAN KUMAR - 6204056473"]
         },
         {
+            "path": "/images/murder_mystery.png",
             "event": "Murder Mystery",
             "club": "Leo",
             "category": "Formal",
@@ -47,6 +48,7 @@
             "contact": ["PRIYANSHU KUMAR - 6203551107"]
         },
         {
+            "path": "/images/connect-o-thon.png",
             "event": "CONNECT-O-THON",
             "club": "IETE",
             "category": "Formal",
@@ -83,6 +85,7 @@
             "contact": ["Lily - 6204489339"]
         },
         {
+            "path": "/images/the marketers.png",
             "event": "The Marketeers",
             "club": "EDC",
             "category": "Formal",
@@ -101,6 +104,7 @@
             "contact": ["Chhavi Rani - 8340319623", "Nikhil Verma - 9660673731"]
         },
         {
+            "path": "/images/shutter_ascent.png",
             "event": "Shutter Ascent",
             "club": "PSOC",
             "category": "Formal",
@@ -119,6 +123,7 @@
             "contact": ["Shubhankar Dubey - 7004591798"]
         },
         {
+            "path": "/images/xerolag.png",
             "event": "Xerolag",
             "club": "Sports and Adventure Club",
             "category": "Formal",
@@ -128,6 +133,7 @@
             "contact": ["Yashdev Tiwari - 6393115243", "Kartik Doley - 8169217376", "Piyush Raj - 9939175648"]
         },
         {
+            "path": "/images/musical chrades.png",
             "event": "Cultural  Night, Mime,Musical skit",
             "club": "",
             "category": "Formal",
@@ -149,6 +155,7 @@
             "contact": ["Kr. Harshwardhan - 9142821947", "Akshay Tripathi - 9799042593"]
         },
         {
+            "path": "/images/ctf.png",
             "event": "Capture the Flag",
             "club": "IEEE",
             "category": "Formal",
@@ -158,6 +165,7 @@
             "contact": ["Prateek Krishna - 8210371121"]
         },
         {
+            "path": "/images/asta di auots.png",
             "event": "Asta di Autos",
             "club": "SRIJAN + SIME",
             "category": "Formal",
@@ -176,6 +184,7 @@
             "contact": ["Harsh Verma - 9031538883"]
         },
         {
+            "path": "/images/rushhour.png",
             "event": "Rush Hour",
             "club": "Finance Club",
             "category": "Formal",
@@ -188,7 +197,7 @@
             "path": "/images/hatch from scratch.png",
             "event": "Hatch from Scratch",
             "club": "IET",
-            "category": "Formal",
+            "category": "Flagship",
             "timing": "10.00 AM - 10.00 AM (next day, 24 hours)",
             "venue": "Idea Lab",
             "description": "",
@@ -223,6 +232,7 @@
             "contact": ["Shivam - 9470356441"]
         },
         {
+            "path": "/images/insights quest.png",
             "event": "Insights Quest",
             "club": "SDS",
             "category": "Formal",
@@ -250,6 +260,7 @@
             "contact": ["Ujjwal - 9508486750", "Varun - 9304792234"]
         },
         {
+            "path":"/images/cyberbrigeton.png",
             "event": "Cyberbridgeton",
             "club": "IEI Civil",
             "category": "Formal",
@@ -297,6 +308,7 @@
             "contact": ["Shiva Shantanu - 7061307557", "Kapil Lohani - 9413791823"]
         },
         {
+            "path":"/images/journalists hour.png",
             "event": "The Journalist Hour",
             "club": "NAPS",
             "category": "Formal",
@@ -306,6 +318,7 @@
             "contact": ["Priyanka Sinha - 9903411800"]
         },
         {
+            "path": "/images/lost codes.png",
             "event": "Lost Codes",
             "club": "ACM",
             "category": "Formal",
@@ -334,6 +347,7 @@
             "contact": ["Bodhisatwa Sinha - 6296220288"]
         },
         {
+            "path":"/images/airphane investigation.png",
             "event": "Air Crash Investigation",
             "club": "Aerosoc",
             "category": "Formal",
@@ -343,7 +357,8 @@
             "contact": ["Deewakar Prasad - 9470102532"]
         },
         {
-            "event": "Robo Tumble",
+            "path":"/images/robo rumble.png",
+            "event": "Robo Rumble",
             "club": "Robolution",
             "category": "Formal",
             "timing": "Round 1 : 11.00 AM - 1.00 PM, Round 2: 1.30 PM -3.30 PM",
@@ -370,6 +385,7 @@
             "contact": ["Ayush Kumar - 7992331764"]
         },
         {
+            "path":"/images/css battle.png",
             "event": "CSS Battle",
             "club": "IEEE",
             "category": "Formal",
@@ -381,13 +397,14 @@
         {
             "event": "Shipwreck",
             "club": "UNESQUO",
-            "category": "Formal",
+            "category": "Informal",
             "timing": "12:30 PM - 3:00 PM",
             "venue": "CAT Hall",
             "description": "“You see yourself as a shipwreck, but we see your treasure glowing inside, beneath the oceans in your eyes.” ― Curtis Tyrone Jones\nAn indubitable fact for sure, that we all are wrecked and broken but that is how the light shines from within. It's that time of the year where we give you an opportunity to be the chosen one. So behold with bated breath and ineffable energy for a rusty, ruthless and a rummaging ride across the sea with a captain who will guide you according to his whims and fancies.\nCome one and come all as it is time to save yourselves from the perils of the sea and the only weapon you have is your intelligence and wit. Twists and turns await you! Presenting before you the most exciting ride, Shipwreck!\nThe ship might not be dark but the wreck is full of horrors. See you there!",
             "contact": ["Harsh Ranjan - 6201628654"]
         },
         {
+            "path":"/images/razzmatazz.png",
             "event": "Razzmatazz",
             "club": "Dance Club",
             "category": "Formal",
