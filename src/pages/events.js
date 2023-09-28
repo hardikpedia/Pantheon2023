@@ -3,10 +3,12 @@ import Image from "next/image";
 import data from "@/utils/bible.json";
 
 import StarsCanvas from "@/components/StarsEvent";
+import { useEffect } from "react";
 
 const Events = () => {
   
-  const screen = window.innerWidth >= 768 ? 0.0006 : 0.0002;
+  // const screen = window.innerWidth >= 768 ? 0.0006 : 0.0002;
+  
 
   return (
     <div className="bg-black z-0 relative">
@@ -17,6 +19,7 @@ const Events = () => {
         <div className="flex flex-wrap gap-[100px] items-center justify-center pt-12 z-10">
           {data["day1"].map((event, ind) => (
             <EventCard
+              path = {event["path"]}
               key={ind}
               day={"6 Oct"}
               event={event["event"]}
@@ -30,6 +33,7 @@ const Events = () => {
           ))}
           {data["day2"].map((event, ind) => (
             <EventCard
+              path={event["path"]}
               key={ind}
               day={"7 Oct"}
               event={event["event"]}
@@ -43,6 +47,7 @@ const Events = () => {
           ))}
           {data["day3"].map((event, ind) => (
             <EventCard
+            path={event["path"]}
               key={ind}
               day={"8 Oct"}
               event={event["event"]}
@@ -56,7 +61,7 @@ const Events = () => {
           ))}
         </div>
       </div>
-      <StarsCanvas screen={screen} />
+      {/* <StarsCanvas screen={screen} /> */}
     </div>
   );
 };

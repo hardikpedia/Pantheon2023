@@ -1,52 +1,70 @@
 
 export const learnSponosor1=[
     {
-        Name: "Danik Bhaskar",
+        Name: "Sample",
         Link: '',
-        image: "/recruitmentvideo.png",
+        image: "/Pantheon_Emblem_Black.png",
         type: "Title Partner"
     },
     {
-        Name: "Sanako",
+        Name: "Sample",
         Link: '',
-        image: "/recruitmentvideo.png",
-        type: " Title Partner"
-    },
-    {
-        Name: "Henry Harvin",
-        Link: '',
-        image: "/recruitmentvideo.png",
-        type: "Education Sponsor"
-    },
-    {
-        Name: "Geeks of Geeks",
-        Link: '',
-        image: "/recruitmentvideo.png",
+        image: "/Pantheon_Emblem_Black.png",
         type: "Title Partner"
     },
     {
-        Name: "Interview Buddy",
+        Name: "Sample",
         Link: '',
-        image: "/recruitmentvideo.png",
-        type: "Title Partner "
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
     },
     {
-        Name: "Codingal",
+        Name: "Sample",
         Link: '',
-        image: "/recruitmentvideo.png",
-        type: "Title Partner "
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
     },
     {
-        Name: "startuped",
+        Name: "Sample",
         Link: '',
-        image: "/recruitmentvideo.png",
-        type: " Title Partner"
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
     },
     {
-        Name: "THE TIMES OF INDIA",
+        Name: "Sample",
         Link: '',
-        image: "/recruitmentvideo.png",
-        type : "Title Partner"
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
+    },
+    {
+        Name: "Sample",
+        Link: '',
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
+    },
+    {
+        Name: "Sample",
+        Link: '',
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
+    },
+    {
+        Name: "Sample",
+        Link: '',
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
+    },
+    {
+        Name: "Sample",
+        Link: '',
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
+    },
+    {
+        Name: "Sample",
+        Link: '',
+        image: "/Pantheon_Emblem_Black.png",
+        type: "Title Partner"
     },
     ]
 

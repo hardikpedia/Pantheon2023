@@ -1,6 +1,7 @@
 {
     "day1": [
         {
+            "path": "/images/droid trooper.png",
             "event": "Droid Trooper",
             "club": "Robolution",
             "category": "Flagship",
@@ -138,6 +139,7 @@
     ],
     "day2": [
         {
+            "path": "/images/PANTHEONQUIZ.png",
             "event": "The Pantheon Quiz",
             "club": " UNESQUO + Events Team",
             "category": "Flagship",
@@ -183,6 +185,7 @@
             "contact": ["AALOK PRAVEEN - 9546949124"]
         },
         {
+            "path": "/images/hatch from scratch.png",
             "event": "Hatch from Scratch",
             "club": "IET",
             "category": "Formal",
@@ -201,6 +204,7 @@
             "contact": ["Shashank Anand - 8789890274"]
         },
         {
+            "path": "/images/CODEZILLA.png",
             "event": "Codezilla",
             "club": "ACM",
             "category": "Flagship",
@@ -311,6 +315,7 @@
             "contact": ["Raj Aryan - 72590 27418", "Kumar Shivam - 9693576605"]
         },
         {
+            "path": "/images/cube de cemento.png",
             "event": "Cube-De-Cemento",
             "club": "IEI Civil",
             "category": "Flagship",
@@ -392,6 +397,7 @@
             "contact": ["Belal Khan - 7632810733", "Ritesh kumar - 6203167432"]
         },
         {
+            "path": "/images/mr miss pantheon.png",
             "event": "Mr. & Miss Pantheon",
             "club": "Leo & Rotaract",
             "category": "Flagship",

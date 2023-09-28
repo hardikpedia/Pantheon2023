@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
 
-const EventCard = ({ day, event, venue, timing, category, desc, club, contact }) => {
+const EventCard = ({ day, event, venue, timing, category, desc, club, contact, path }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
@@ -14,7 +14,7 @@ const EventCard = ({ day, event, venue, timing, category, desc, club, contact })
 
   return (
     <div
-      className={`h-[450px] w-[320px] overflow-hidden shadow-lg transition-transform transform hover:scale-105 border-white border-[1px] rounded-2xl ${
+      className={`h-[530px] w-[320px] overflow-hidden shadow-lg transition-transform transform hover:scale-105 border-white border-[1px] rounded-2xl ${
         isHovered ? "hover:description-visible" : ""
       }` }
       onMouseEnter={() => setIsHovered(true)}
@@ -27,15 +27,15 @@ const EventCard = ({ day, event, venue, timing, category, desc, club, contact })
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <div>
         <Image
-          src="/recruitmentvideo.png"
+          src={path ? path : '/Pantheon_Emblem_White.png'}
           alt="title"
-          className="w-full h-350 object-cover rounded-t-lg"
+          className={`w-full ${path ? 'p-0' : 'pt-[100px] mb-5'} h-350 object-cover rounded-t-lg`}
           width={320}
           height={350}
         />
       </div>
 
-      <div className="px-6 py-4 bg-gray-300 rounded-lg">
+      <div className="px-6 py-4 bg-gray-300 ">
         <div className="font-bold text-xl mb-2 text-gray-700">{event}</div>
         <p className="text-gray-700 text-base">{day}</p>
         <p className="text-gray-700 text-base"><b>Venue : </b>{venue}</p>
@@ -51,8 +51,8 @@ const EventCard = ({ day, event, venue, timing, category, desc, club, contact })
         <p className="text-gray-700 text-base"><b>Timing : </b>{timing}</p><br />
         {desc &&
           <>
-            <p className="text-gray-700 text-base">{desc.slice(0, 250)}
-            {desc.length > 200 && "..."}
+            <p className="text-gray-700 text-base">{desc.slice(0, 300)}
+            {desc.length > 250 && "..."}
             </p>
             <br />
           </>
