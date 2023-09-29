@@ -25,19 +25,19 @@ const Sponsors = ({ data }) => {
 
               <h1 className="p-4"></h1>
 
-              <div className="flex justify-center flex-wrap rounded-[20px]">
+              <div className="flex justify-center flex-wrap rounded-[20px] gap-7">
                 {learnSponosor1.map((sponsor, index) => {
                   return <SponsorBox data={sponsor} key={index} />;
                 })}
               </div>
 
-              <h2 className="bg-clip-text text-[white] text-2xl text-center">
+              {/* <h2 className="bg-clip-text text-[white] text-2xl text-center">
                 <h1 className="p-4"></h1>
                 Past Sponsors
                 <h1 className="p-4"></h1>
               </h2>
 
-              <Sliderss />
+              <Sliderss /> */}
             </div>
           </div>
         </section>
