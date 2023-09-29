@@ -7,8 +7,8 @@ import StarsCanvas from "@/components/Stars";
 
 const Sponsors = ({ data }) => {
   return (
-    <>
-      <div className=" justify-center items-center relative bg-black z-0">
+    <div className='h-screen relative'>
+      <div className="justify-center items-center relative bg-black z-0">
         <section>
           <div className="pt-8">
             <div
@@ -31,19 +31,19 @@ const Sponsors = ({ data }) => {
                 })}
               </div>
 
-              <h2 className="bg-clip-text text-[white] text-2xl text-center">
+              {/* <h2 className="bg-clip-text text-[white] text-2xl text-center">
                 <h1 className="p-4"></h1>
                 Past Sponsors
                 <h1 className="p-4"></h1>
               </h2>
 
-              <Sliderss />
+              <Sliderss /> */}
             </div>
           </div>
         </section>
         <StarsCanvas />
       </div>
-    </>
+    </div>
   );
 };
 

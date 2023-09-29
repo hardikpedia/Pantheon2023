@@ -30,6 +30,7 @@ const Events = () => {
               desc={event["description"]}
               club={event["club"]}
               contact={event["contact"]}
+              register={event["register"]}
             />
           ))}
           <h1 className="w-full flex justify-center m-auto text-white text-3xl font-bold">DAY 2</h1>
@@ -45,6 +46,7 @@ const Events = () => {
               desc={event["description"]}
               club={event["club"]}
               contact={event["contact"]}
+              register={event["register"]}
             />
           ))}
           <h1 className="w-full flex justify-center m-auto text-white text-3xl font-bold">DAY 3</h1>
@@ -60,6 +62,7 @@ const Events = () => {
               desc={event["description"]}
               club={event["club"]}
               contact={event["contact"]}
+              register={event["register"]}
             />
           ))}
         </div>

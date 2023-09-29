@@ -3,8 +3,9 @@ import React from "react";
 import { useState, useRef, useEffect } from "react";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
+import Link from "next/link";
 
-const EventCard = ({ day, event, venue, timing, category, desc, club, contact, path }) => {
+const EventCard = ({ day, event, venue, timing, category, desc, club, contact, path, register }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
@@ -63,7 +64,7 @@ const EventCard = ({ day, event, venue, timing, category, desc, club, contact, p
         </div>
         <div className="flex-grow flex items-center justify-center">
           <div className="cursor-pointer bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transform transition-all duration-200 ease-in-out text-white font-bold px-3 py-2 rounded-md">
-            Register
+            <Link href={register ? register : "/"} target="_blank">Register</Link>
           </div>
         </div>
       </div>
