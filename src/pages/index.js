@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Landing from "../components/Landing";
 import Animation from "../components/Animation";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,12 +33,16 @@ export default function Home() {
         <div className="flex justify-center flex-col  md:mt-10 items-center scale-[0.69] sm:scale-75 md:scale-100 ">
           <Landing />
           <div className="flex flex-col justify-center items-center scale-75 ">
+          
           <h1 className="font-bold text-4xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-10 animate-bounce  ...">
             Merch Available
           </h1>
           <div onClick={buyMerch} className="cursor-pointer flex text-2xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ">
             <span className=' cursor-pointer text-blue-500 px-2' >click here </span>  to buy now
           </div>
+          <h1 onClick={()=>{router.push('/signup')}} className="cursor-pointer text-center animate-wiggle animate-infinite animate-ease-in-out animate-normal font-bold text-4xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-2 ">
+            Registration Open
+          </h1>
           </div>
         </div>
       </div>

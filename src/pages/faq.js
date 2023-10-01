@@ -32,7 +32,7 @@ const data = [
     },
     {
         ques: "Is there a registration fee for individual events?",
-        ans: "There are no fees for taking part in any Pantheon event. Enjoy!"
+        ans: "There are no fees for taking part in any Pantheon event for BIT Mesra Students. But the students from other colleges will have to pay a nominal admission price of ₹1100, payable upon arrival at the campus, which covers the cost of an official Pantheon T-shirt, a three-day accommodation, entry to Pantheon nights, and participation in all the  events.!"
     },
     {
         ques: "What is the dress code for Pantheon?",
