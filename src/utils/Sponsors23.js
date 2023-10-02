@@ -36,36 +36,6 @@ export const learnSponosor1=[
         image: "/Pantheon_Emblem_Black.png",
         type: "Title Partner"
     },
-    {
-        Name: "Sample",
-        Link: '',
-        image: "/Pantheon_Emblem_Black.png",
-        type: "Title Partner"
-    },
-    {
-        Name: "Sample",
-        Link: '',
-        image: "/Pantheon_Emblem_Black.png",
-        type: "Title Partner"
-    },
-    {
-        Name: "Sample",
-        Link: '',
-        image: "/Pantheon_Emblem_Black.png",
-        type: "Title Partner"
-    },
-    {
-        Name: "Sample",
-        Link: '',
-        image: "/Pantheon_Emblem_Black.png",
-        type: "Title Partner"
-    },
-    {
-        Name: "Sample",
-        Link: '',
-        image: "/Pantheon_Emblem_Black.png",
-        type: "Title Partner"
-    },
     ]
 
     
