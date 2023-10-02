@@ -163,6 +163,17 @@
             "venue": "GP Birla Auditorium",
             "description": "",
             "contact": ["Vijeta Kujur - 7294150969"]
+        },
+        {
+            "path": "/images/7_20230928_181241_0006.png",
+            "event": "ElectroQuest",
+            "club": "ECE Society",
+            "register": "https://forms.gle/MAeMHD8nXLvdDrECA",
+            "category": "Informal",
+            "venue": "Classroom",
+            "timing": "Round 1: 12.00 PM - 2:00 PM, Round 2: 2.30 PM - 4:30 PM",
+            "description": "Round 1: In this round teams will be shown some general science and tech related questions and answers that need to be marked by the teams on their laptops on a website which will be showing their live leaderboard. This round is a time game for all teams, faster ones will win. Round 2 : Top 8 qualifying teams will be given some electronics related coding questions. These questions are based on simple electronics and general science knowledge and code to be written is just some basic coding skills. Major catch is the electronics and science knowledge.This round will be held on HACKERRANK platform.",
+            "contact": ["Chhavi Rani - 8340319623", "Nikhil Verma - 9660673731"]
         }
     ],
     "day2": [

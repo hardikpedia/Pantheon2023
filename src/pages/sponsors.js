@@ -7,7 +7,7 @@ import StarsCanvas from "@/components/Stars";
 
 const Sponsors = ({ data }) => {
   return (
-    <div className='h-screen relative'>
+    <div className='relative'>
       <div className="justify-center items-center relative bg-black z-0">
         <section>
           <div className="pt-8">
