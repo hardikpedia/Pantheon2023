@@ -40,8 +40,10 @@ export default function Home() {
           <div onClick={buyMerch} className="cursor-pointer flex text-2xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ">
             <span className=' cursor-pointer text-blue-500 px-2' >click here </span>  to buy now
           </div>
-          <h1 onClick={()=>{router.push('/signup')}} className="cursor-pointer text-center animate-wiggle animate-infinite animate-ease-in-out animate-normal font-bold text-4xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-2 ">
-            Registration Open
+          <h1 onClick={()=>{router.push('/signup')}} className="cursor-pointer text-center animate-wiggle animate-infinite animate-ease-in-out animate-normal font-bold text-2xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-2 ">
+            {/* Registration Open */}
+            Server under maintenance. Registration will start soon. 
+
           </h1>
           </div>
         </div>

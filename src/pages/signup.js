@@ -78,13 +78,15 @@ export default function Signup() {
     }
 
     return (
-        <div className="bg-primary bg-black pt-10 pb-20">
+        <div className="bg-primary h-screen bg-black pt-10 pb-20">
             
             <div className='mx-auto bg-primary bg-pink-200  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-[0.09] rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]'>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
                     {isLoading && <Loader />}
+<h1 className="font-bold text-3xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">Server under maintenance. Registration will start soon. 
+</h1>
 
-                    <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
+                    {/* <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
                     <h1 className="font-bold text-3xl md:text-5xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">SIGNUP</h1>
 
 
@@ -140,7 +142,7 @@ export default function Signup() {
                                 styles=""
                             />
                         </div>
-                    </form>
+                    </form> */}
                 </div>
             </div>
 

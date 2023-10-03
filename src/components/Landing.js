@@ -12,7 +12,7 @@ const Landing = () => {
     let interval = useRef()
 
     const startTimer = () => {
-        var countDownDate = new Date("Oct 07, 2023, 00:00:00").getTime();
+        var countDownDate = new Date("Oct 05, 2023, 17:00:00").getTime();
 
         interval = setInterval(function () {
             var now = new Date().getTime();
