@@ -16,9 +16,10 @@ export default function Signup() {
         setotpModel(false)
     }
 
-    const handleClick = (e) => {
-        if (e.target.id === 'join') {
-            setotpModel(true)
+    const handleClick = async (e) => {
+        if (e.target.id === 'otp') {
+            await onSubmitHandler(e);
+            setotpModel(true);
         }
     }
 
@@ -53,42 +54,23 @@ export default function Signup() {
     const onSubmitHandler = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        const response = await fetch('api/users/signup', {
+        const response = await fetch('api/users/handler', {
             method: 'POST',
             body: JSON.stringify({
-                name: form.name,
-                email: form.email,
-                phone: form.phone,
-                college: form.college,
-                password: form.password
+                email: form.email
             }),
             headers: {
                 'Content-Type': 'application/json'
             }
-        });
-        const data = await response.json();
+        })
+        const res = await response.json();
         setIsLoading(false);
         if(!response.ok) {
-            alert(data.message);
+            alert(res.message);
             return;
         }
-        const id = data['ID'];
-        setUser(true);
-        setUserInfo({
-            name: form.name,
-            pantheonid: id,
-            email: form.email,
-            teamID: "null"
-        });
-        setForm({
-            name: '',
-            email: '',
-            phone: '',
-            college: '',
-            password: ''
-        });
-        router.push('/profile');
-    };
+        setotpModel(true);
+    }
 
     const handleClik = () => {
         router.push('/login');
@@ -149,13 +131,13 @@ export default function Signup() {
 
                         <div className='font-poppins font-normal text-white/50 text-[15px] md:text-[16px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Already have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > login? </span>  </div>
                         <div className='flex justify-center items-center'>
-                        <div id='join' onClick={handleClick} className='m-2 cursor-pointer font-epilogue text-[16px] leading-[26px] min-h-[52px] bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transform transition-all duration-200 ease-in-out text-white font-bold py-3 px-6 rounded-md' > SIGNUP </div>
+                        <div id='otp' onClick={handleClick} className='m-2 cursor-pointer font-epilogue text-[16px] leading-[26px] min-h-[52px] bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transform transition-all duration-200 ease-in-out text-white font-bold py-3 px-6 rounded-md' > SIGNUP </div>
                         </div>
 
                     </form>
                 </div>
             </div>
-            <OtpModel onClose={handleOnClose} visible={otpModel}  />
+            <OtpModel onClose={handleOnClose} visible={otpModel} name={name} email={email} phone={phone} college={college} password={password} />
 
             {/* <ToastContainer /> */}
         </div>

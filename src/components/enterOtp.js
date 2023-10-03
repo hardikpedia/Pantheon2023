@@ -6,10 +6,11 @@ import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import Loader from './Loader';
 import { useStateContext } from '@/context';
+import { useRouter } from 'next/router';
 
-export default function EnterOtp({ id }) {
+export default function EnterOtp({ name, email, password, phone, college }) {
     const { user, userinfo, setUser, setUserInfo } = useStateContext();
-
+    const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [otp, setOtp] = useState('')
 
@@ -21,9 +22,37 @@ export default function EnterOtp({ id }) {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
-
-        console.log(otp);
-        
+        setIsLoading(true);
+        const response = await fetch('api/users/signup', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                phone: phone,
+                college: college,
+                password: password,
+                otp: otp
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const data = await response.json();
+        setIsLoading(false);
+        if(!response.ok) {
+            alert(data.message);
+            return;
+        }
+        const id = data['ID'];
+        setUser(true);
+        setUserInfo({
+            name: name,
+            pantheonid: id,
+            email: email,
+            teamID: "null"
+        });
+        setOtp('');
+        router.push('/profile');
     };
 
 
