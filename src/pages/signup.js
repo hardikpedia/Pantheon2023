@@ -5,8 +5,25 @@ import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import { useStateContext } from '@/context';
 import Loader from '@/components/Loader';
+import OtpModel from '@/components/otpModel';
+import JoinModel from '@/components/joinTeamPopup';
 
 export default function Signup() {
+
+    const [otpModel, setotpModel] = useState(false)
+
+    const handleOnClose = () => {
+        setotpModel(false)
+    }
+
+    const handleClick = (e) => {
+        if (e.target.id === 'join') {
+            setotpModel(true)
+        }
+    }
+
+
+
     const [isLoading, setIsLoading] = useState(false);
 
     const router = useRouter();
@@ -131,18 +148,14 @@ export default function Signup() {
                         </div>
 
                         <div className='font-poppins font-normal text-white/50 text-[15px] md:text-[16px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Already have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > login? </span>  </div>
-
-                        <div className="flex justify-center items-center mt-[30px]">
-                            <CustomButton
-                                btnType="submit"
-                                title="Sign Up"
-                                handleClick={onSubmitHandler}
-                                styles=""
-                            />
+                        <div className='flex justify-center items-center'>
+                        <div id='join' onClick={handleClick} className='m-2 cursor-pointer font-epilogue text-[16px] leading-[26px] min-h-[52px] bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transform transition-all duration-200 ease-in-out text-white font-bold py-3 px-6 rounded-md' > SIGNUP </div>
                         </div>
+
                     </form>
                 </div>
             </div>
+            <OtpModel onClose={handleOnClose} visible={otpModel}  />
 
             {/* <ToastContainer /> */}
         </div>
