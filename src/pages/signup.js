@@ -5,8 +5,26 @@ import CustomButton from '@/components/CustomButton';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import { useStateContext } from '@/context';
 import Loader from '@/components/Loader';
+import OtpModel from '@/components/otpModel';
+import JoinModel from '@/components/joinTeamPopup';
 
 export default function Signup() {
+
+    const [otpModel, setotpModel] = useState(false)
+
+    const handleOnClose = () => {
+        setotpModel(false)
+    }
+
+    const handleClick = async (e) => {
+        if (e.target.id === 'otp') {
+            await onSubmitHandler(e);
+            setotpModel(true);
+        }
+    }
+
+
+
     const [isLoading, setIsLoading] = useState(false);
 
     const router = useRouter();
@@ -36,57 +54,36 @@ export default function Signup() {
     const onSubmitHandler = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        const response = await fetch('api/users/signup', {
+        const response = await fetch('api/users/handler', {
             method: 'POST',
             body: JSON.stringify({
-                name: form.name,
-                email: form.email,
-                phone: form.phone,
-                college: form.college,
-                password: form.password
+                email: form.email
             }),
             headers: {
                 'Content-Type': 'application/json'
             }
-        });
-        const data = await response.json();
+        })
+        const res = await response.json();
         setIsLoading(false);
         if(!response.ok) {
-            alert(data.message);
+            alert(res.message);
             return;
         }
-        const id = data['ID'];
-        setUser(true);
-        setUserInfo({
-            name: form.name,
-            pantheonid: id,
-            email: form.email,
-            teamID: "null"
-        });
-        setForm({
-            name: '',
-            email: '',
-            phone: '',
-            college: '',
-            password: ''
-        });
-        router.push('/profile');
-    };
+        setotpModel(true);
+    }
 
     const handleClik = () => {
         router.push('/login');
     }
 
     return (
-        <div className="bg-primary h-screen bg-black pt-10 pb-20">
+        <div className="bg-primary bg-black pt-10 pb-20">
             
             <div className='mx-auto bg-primary bg-pink-200  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-[0.09] rounded-lg  w-[90%] sm:w-[80%] md:w-[60%]'>
                 <div className=" flex justify-center items-center flex-col  sm:p-10 p-6 ">
                     {isLoading && <Loader />}
-<h1 className="font-bold text-3xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">Server under maintenance. Registration will start soon. 
-</h1>
 
-                    {/* <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
+                    <form onSubmit={onSubmitHandler} className="w-full md:lg-[80%] lg:w-[75%] mt-[10px] flex flex-col gap-[15px]">
                     <h1 className="font-bold text-3xl md:text-5xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center">SIGNUP</h1>
 
 
@@ -133,18 +130,14 @@ export default function Signup() {
                         </div>
 
                         <div className='font-poppins font-normal text-white/50 text-[15px] md:text-[16px] leading-[25px] flex md:text-start text-center md:leading-[30.8px]' > Already have an account? <span onClick={handleClik} className='underline cursor-pointer text-blue-800 ml-2' > login? </span>  </div>
-
-                        <div className="flex justify-center items-center mt-[30px]">
-                            <CustomButton
-                                btnType="submit"
-                                title="Sign Up"
-                                handleClick={onSubmitHandler}
-                                styles=""
-                            />
+                        <div className='flex justify-center items-center'>
+                        <div id='otp' onClick={handleClick} className='m-2 cursor-pointer font-epilogue text-[16px] leading-[26px] min-h-[52px] bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transform transition-all duration-200 ease-in-out text-white font-bold py-3 px-6 rounded-md' > SIGNUP </div>
                         </div>
-                    </form> */}
+
+                    </form>
                 </div>
             </div>
+            <OtpModel onClose={handleOnClose} visible={otpModel} name={name} email={email} phone={phone} college={college} password={password} />
 
             {/* <ToastContainer /> */}
         </div>
