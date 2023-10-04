@@ -4,30 +4,6 @@ import { createTransport } from "nodemailer";
 import Security from "@/models/security";
 import User from "@/models/user";
 
-const send = async (email, otp) => {
-    let mailTransporter = createTransport({
-      service: "gmail",
-      auth: {
-        user: "techinfo.pantheon@gmail.com",
-        pass: "peylrwxxkphhyytq",
-      },
-    });
-  
-    let mailDetails = {
-      from: "techinfo.pantheon@gmail.com",
-      to: email,
-      subject: "Pantheon OTP",
-      text: `Your OTP is ${otp}. It is valid for the next 5 minutes only.`,
-    };
-  
-    mailTransporter.sendMail(mailDetails, function (err, data) {
-      if (err) {
-        console.log("Error Occurs");
-      } else {
-        console.log("Email sent successfully");
-      }
-    });
-  };
 
   async function handler(req, res) {
     await dbConnect();
@@ -43,18 +19,59 @@ const send = async (email, otp) => {
       }
       if(existingUser) return res.status(404).json({ 'message': 'User already exists' });
       const otp = Math.floor(Math.random()*1000000);
-      await send(email, otp.toString());
+
+
+
+
+      // await send(email, otp.toString());
+      let mailTransporter = createTransport({
+        service: "gmail",
+        auth: {
+          user: "techinfo.pantheon@gmail.com",
+          pass: "peylrwxxkphhyytq",
+        },
+      });
+    
+      let mailDetails = {
+        from: "techinfo.pantheon@gmail.com",
+        to: email,
+        subject: "Pantheon OTP",
+        text: `Your OTP is ${otp.toString()}. It is valid for the next 5 minutes only.`,
+      };
+    
+      try{
+        await mailTransporter.sendMail(mailDetails);
+      } catch (err) {
+        return res.status(404).json({ 'message': 'Internal Server Error' });
+      }
+      
+      
+      
       const security = new Security({
         email: email,
         otp: otp.toString()
       });
-
+      let existingSecurity;
+      try {
+        existingSecurity = await Security.findOne({ email: email });
+      } catch (err) {
+        return res.status(500).json({ 'message': 'Internal Server Error' });
+      }
+      if(existingSecurity) {
+        try {
+          existingSecurity.otp = otp.toString();
+          await existingSecurity.save();
+        } catch (err) {
+          return res.status(500).json({ 'message': 'Internal Server Error' });
+        }
+        return res.status(201).json({ 'message': 'Success' });
+      }
       try {
         await security.save();
       } catch(err) {
         return res.status(500).json({ 'message': 'Internal Server Error' });
       }
-      res.status(200).json({ status: otp });
+      res.status(200).json({ status: 'Success' });
     }
   }
   export default handler;

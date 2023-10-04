@@ -19,7 +19,7 @@ export default async function signup(req, res) {
         res.status(404).json({ 'message': 'Internal Server Error' });
     }
     if(!getotp) return res.status(404).json({ 'message': 'Email not found' });
-    console.log(getotp, otp);
+    // console.log(getotp, otp);
     if(getotp.otp != otp) return res.status(404).json({ 'message': 'Incorrect OTP' });
 
     // check if already present
