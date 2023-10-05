@@ -48,22 +48,29 @@ const Landing = () => {
         <div className=' bg-white/[0.15] h-fit w-fit rounded-md md:rounded-lg flex flex-row justify-center items-center md:px-4 text-white' >
             {/* <h1 className="text-6xl " >Coming Soon...</h1> */}
 
-            <TimerComponent
+            {/* <TimerComponent
                 label="DAYS"
                 value={days}
             />
             <TimerComponent
                 label="HOURS"
                 value={hours}
-            />
-            <TimerComponent
+            /> */}
+            {/* <TimerComponent
                 label="MINUTES"
                 value={minutes}
             />
             <TimerComponent
                 label="SECONDS"
                 value={seconds}
+            /> */}
+            <TimerComponent
+                label="SECONDS"
+                value={seconds}
             />
+            {/* <div className="text-center mx-2 px-2 py-4 my-2">
+      <h1 className="font-bold w-fit text-3xl md:text-5xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">LIVE NOW</h1>
+    </div> */}
 
 
         </div>

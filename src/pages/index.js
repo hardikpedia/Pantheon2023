@@ -19,7 +19,7 @@ export default function Home() {
       <div className="">
         <Animation />
       </div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-[50%] -translate-y-[55%] w-fit flex flex-col  justify-center items-center bg-transparent">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-[50%] -translate-y-[55%] w-[90%] flex flex-col  justify-center items-center bg-transparent">
         <div>
           <Image
             src="/pantheon_main_white.png"
@@ -30,8 +30,8 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="flex justify-center flex-col  md:mt-10 items-center scale-[0.69] sm:scale-75 md:scale-100 ">
-          {/* <Landing /> */}
+        <div className="flex justify-center flex-col  md:mt-10 items-center scale-100 ">
+          <Landing />
           <div className="flex flex-col justify-center items-center scale-75 ">
           
           <h1 className="font-bold text-4xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-10 animate-bounce  ...">
