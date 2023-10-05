@@ -31,7 +31,7 @@ export default function Home() {
           />
         </div>
         <div className="flex justify-center flex-col  md:mt-10 items-center scale-[0.69] sm:scale-75 md:scale-100 ">
-          <Landing />
+          {/* <Landing /> */}
           <div className="flex flex-col justify-center items-center scale-75 ">
           
           <h1 className="font-bold text-4xl z-100 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-10 animate-bounce  ...">

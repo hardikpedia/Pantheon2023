@@ -21,7 +21,6 @@ export default function LoginIn() {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
-
         emailjs.sendForm('service_btjgz1j', 'template_h5pz3d7', form.current, '0uS62Kla4rMtxoNGo')
         .then((result) => {
             console.log(result.text);
@@ -83,7 +82,7 @@ export default function LoginIn() {
                 <div className='pb-4 text-start flex flex-col justify-start items-center text-white/50'>
                     <div>Prateek Krishna : 8210371121</div>
                     <div>Kumar Shivam : 9693576605</div>
-                    <div>Raj Aryan : 7259027418</div>
+                    <div>Raj Aryan</div>
                 </div>
             </div>
 

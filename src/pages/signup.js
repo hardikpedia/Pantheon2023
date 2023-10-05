@@ -18,7 +18,11 @@ export default function Signup() {
 
     const handleClick = async (e) => {
         if (e.target.id === 'otp') {
-            await onSubmitHandler(e);
+            try {
+                await onSubmitHandler(e);
+            } catch (err) {
+                return;
+            }
             setotpModel(true);
         }
     }
@@ -67,7 +71,7 @@ export default function Signup() {
         setIsLoading(false);
         if(!response.ok) {
             alert(res.message);
-            return;
+            throw "error";
         }
         setotpModel(true);
     }
