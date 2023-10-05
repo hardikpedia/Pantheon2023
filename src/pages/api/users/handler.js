@@ -18,7 +18,7 @@ import User from "@/models/user";
           return res.status(500).json({ 'message': 'Internal server Error' });
       }
       if(existingUser) return res.status(404).json({ 'message': 'User already exists' });
-      const otp = Math.floor(Math.random()*1000000);
+      const otp = Math.floor(Math.random()*1000000)
 
 
 
@@ -27,13 +27,13 @@ import User from "@/models/user";
       let mailTransporter = createTransport({
         service: "gmail",
         auth: {
-          user: "techinfo.pantheon@gmail.com",
-          pass: "peylrwxxkphhyytq",
+          user: "pantheon.techinfo2023@gmail.com",
+          pass: "ksjk bkza lkjy bjbf",
         },
       });
     
       let mailDetails = {
-        from: "techinfo.pantheon@gmail.com",
+        from: "pantheon.techinfo2023@gmail.com",
         to: email,
         subject: "Pantheon OTP",
         text: `Your OTP is ${otp.toString()}. It is valid for the next 5 minutes only.`,
@@ -42,6 +42,7 @@ import User from "@/models/user";
       try{
         await mailTransporter.sendMail(mailDetails);
       } catch (err) {
+        console.log(err);
         return res.status(404).json({ 'message': 'Internal Server Error' });
       }
       
