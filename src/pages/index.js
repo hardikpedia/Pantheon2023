@@ -19,7 +19,7 @@ export default function Home() {
       <div className="">
         <Animation />
       </div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-[50%] -translate-y-[55%] w-[90%] flex flex-col  justify-center items-center bg-transparent">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-[50%] -translate-y-[55%] w-[75%] sm:w-[70%] md:w-[40%] lg:w-[30%] flex flex-col  justify-center items-center bg-transparent">
         <div>
           <Image
             src="/pantheon_main_white.png"
