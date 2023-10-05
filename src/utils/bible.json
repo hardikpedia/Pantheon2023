@@ -348,7 +348,18 @@
       "venue": "233, 236",
       "description": "Get ready to elevate the classic game of charades to a whole new level with \"Musical Charades!\" This uproarious event adds a thrilling twist to the beloved game of gestures and clues. Here's how it works: teams of enthusiastic participants will don noise-cancelling headphones blasting energetic tunes, making communication a hilarious challenge. As you take turns acting out movie titles, book names, famous phrases, and more, your teammates will attempt to decipher your messages without the aid of spoken words. The result? A raucously entertaining evening filled with laughter, wild gesticulations, and the delightful chaos of trying to guess while grooving to the beats. Musical Charades promises unforgettable moments, teamwork, and uproarious fun. Join us for an unforgettable night of musical mayhem!",
       "contact": ["Shiva Shantanu - 7061307557", "Snigdha Burman - 6203632715"]
-    }
+    },
+    {
+        "register": "https://docs.google.com/forms/d/e/1FAIpQLSdEExQEZXmGHDRfed0gb1WFnMx-Hf1xfbgDzjCOmQfSi5DooQ/viewform",
+        "path": "/images/invictus.jpeg",
+        "event": "Invictus",
+        "club": "BIOTS",
+        "category": "Informal",
+        "timing": "Round 1- 11:30 AM - 12:30 PM, Round 2- 12:30 PM - 1:00 PM, Round 3 - 1:30 AM - 3:00 PM",
+        "venue": "219, 217",
+        "description": "Are you ready to showcase your brilliance and prove yourself as the ultimate trivia champion? Brace yourself for an epic showdown of intellect and imagination with INVICTUS, presented by BIOTS! Invictus will put your knowledge to the ultimate test. So gear up, let the creative juices flow fast and grab this opportunity to prove you're the smartest of them all. Step into the arena and let the quizzing battle begin!",
+        "contact": ["Afzal  - 8271827570"]
+      }
   ],
   "day3": [
     {
