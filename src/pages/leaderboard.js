@@ -52,25 +52,31 @@ var data = [
         score: "80"
     },
     {
-        name: "Pahaan",
-        score: "50"
+        name: "NODDY",
+        score: "80"
     },
     {
         name: "Hey Baby",
         score: "70"
     },
+    
     {
         name: "Name 404",
         score: "70"
+    },
+    {
+        name: "Pahaan",
+        score: "50"
     },
     {
         name: "Team Z",
         score: "50"
     },
     {
-        name: "OtoChan",
-        score: "30"
+        name: "Black Widow",
+        score: "50"
     },
+    
     {
         name: "Hydra X",
         score: "40"
@@ -79,6 +85,10 @@ var data = [
         name: "Anantam",
         score: "40"
     },
+    {
+        name: "OtoChan",
+        score: "30"
+    },
     
     {
         name: "Proxima",
@@ -86,19 +96,11 @@ var data = [
     },
     
     {
-        name: "Black Widow",
-        score: "50"
-    },
-    
-    {
         name: "cout << \"The Boys\";",
         score: "30"
     },
     
-    {
-        name: "NODDY",
-        score: "80"
-    },
+    
     {
         name: "Black",
         score: "30"
