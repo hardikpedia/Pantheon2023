@@ -45,7 +45,7 @@ var data = [
     },
     {
         name: "3.0",
-        score: "780"
+        score: "1200"
     },
     {
         name: "Mahesh",
@@ -69,11 +69,11 @@ var data = [
     },
     {
         name: "VRQTZ",
-        score: "150"
+        score: "400"
     },
     {
         name: "Oni Chan",
-        score: "1030"
+        score: "1300"
     },
     {
         name: "Lavender",
@@ -108,7 +108,6 @@ var data = [
         name: "Black Widow",
         score: "200"
     },
-    
     {
         name: "Hydra X",
         score: "40"
@@ -129,7 +128,7 @@ var data = [
     
     {
         name: "cout << \"The Boys\";",
-        score: "30"
+        score: "130"
     },
     
     
@@ -141,6 +140,14 @@ var data = [
     {
         name: "Galactio",
         score: "130"
+    },
+    {
+        name: "Chalo",
+        score: "80"
+    },
+    {
+        name: "Veritasium",
+        score: "200"
     },
     
     
