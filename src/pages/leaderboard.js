@@ -37,7 +37,7 @@ var data = [
     },
     {
         name: "octaGlitch",
-        score: "1320"
+        score: "1170"
     },
     {
         name: "Dhoom Dhadaka",
@@ -45,7 +45,7 @@ var data = [
     },
     {
         name: "3.0",
-        score: "1500"
+        score: "1280"
     },
     {
         name: "Mahesh",
