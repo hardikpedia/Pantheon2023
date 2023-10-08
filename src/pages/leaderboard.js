@@ -45,7 +45,7 @@ var data = [
     },
     {
         name: "3.0",
-        score: "1280"
+        score: "1330"
     },
     {
         name: "Mahesh",
@@ -73,7 +73,7 @@ var data = [
     },
     {
         name: "Oni Chan",
-        score: "1300"
+        score: "1180"
     },
     {
         name: "Lavender",
