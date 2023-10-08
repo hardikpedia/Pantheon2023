@@ -4,16 +4,48 @@ import React, { useEffect } from 'react'
 
 var data = [
     {
+        name: "data wizards",
+        score: "230"
+    },
+    {
+        name: "maverick",
+        score: "250"
+    },
+    {
+        name: "supreme",
+        score: "120"
+    },
+    {
+        name: "compact",
+        score: "300"
+    },
+    {
+        name: "baigan",
+        score: "100"
+    },
+    {
+        name: "atulyo",
+        score: "120"
+    },
+    {
+        name: "azrael",
+        score: "80"
+    },
+    {
+        name: "kasukabe defence group",
+        score: "120"
+    },
+    {
+        name: "octaGlitch",
+        score: "1070"
+    },
+    {
         name: "Dhoom Dhadaka",
         score: "300"
     },
     {
-        name: "octaGlitch",
-        score: "200"
-    },
-    {
         name: "3.0",
-        score: "200"
+        score: "780"
     },
     {
         name: "Mahesh",
@@ -21,7 +53,7 @@ var data = [
     },
     {
         name: "Rom Rom Bhaiyon",
-        score: "150"
+        score: "630"
     },
     {
         name: "Hekrr",
@@ -37,23 +69,23 @@ var data = [
     },
     {
         name: "VRQTZ",
-        score: "100"
+        score: "150"
     },
     {
         name: "Oni Chan",
-        score: "90"
+        score: "1030"
     },
     {
         name: "Lavender",
-        score: "80"
+        score: "200"
     },
     {
         name: "369",
-        score: "80"
+        score: "360"
     },
     {
         name: "NODDY",
-        score: "80"
+        score: "129"
     },
     {
         name: "Hey Baby",
@@ -74,7 +106,7 @@ var data = [
     },
     {
         name: "Black Widow",
-        score: "50"
+        score: "200"
     },
     
     {
@@ -87,7 +119,7 @@ var data = [
     },
     {
         name: "OtoChan",
-        score: "30"
+        score: "60"
     },
     
     {
@@ -108,7 +140,7 @@ var data = [
     
     {
         name: "Galactio",
-        score: "30"
+        score: "130"
     },
     
     
@@ -116,13 +148,33 @@ var data = [
 
 
 
+function sortByScoreDescending(arr) {
+    arr.sort(function (a, b) {
+        var scoreA = parseInt(a.score);
+        var scoreB = parseInt(b.score);
 
-const leaderboard = () => {
+        if (scoreA < scoreB) {
+            return 1;
+        } else if (scoreA > scoreB) {
+            return -1;
+        } else {
+            return 0;
+        }
+    });
+}
+
+
+
+sortByScoreDescending(data);
+
+
+var topdata=data.slice(0,10);
+
+const Leaderboard = () => {
     data = data.sort(
         (p1, p2) => 
         (p1.price < p2.price) ? 1 : (p1.price > p2.price) ? -1 : 0)
-        
-    
+
   return (
     <div className="bg-black z-0 relative">
         <div className="flex flex-col justify-center items-center pt-[50px] pb-[50px] gap-8 ">
@@ -131,7 +183,7 @@ const leaderboard = () => {
             LEADERBOARD
             </h1>
             {
-                data.map((item, ind)=>(
+                topdata.map((item, ind)=>(
                     <Scorecard 
                         key={ind}
                         name={item.name}
@@ -146,4 +198,4 @@ const leaderboard = () => {
   )
 }
 
-export default leaderboard
+export default Leaderboard
